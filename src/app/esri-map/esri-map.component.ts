@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 import { loadModules } from 'esri-loader';
 import esri = __esri;
 
@@ -19,7 +19,7 @@ export class EsriMapComponent implements OnInit {
 
   constructor() { }
 
-  async ngOnInit() {this.initializeMap(); }
+  async ngOnInit() {this.initializeMap();}
 
   async initializeMap() {
     try {
