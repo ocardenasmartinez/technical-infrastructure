@@ -1,16 +1,3 @@
-/*
-  Copyright 2018 Esri
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-    http://www.apache.org/licenses/LICENSE-2.0
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
-*/
-
 import { Component, OnInit, ViewChild, ElementRef, Input, Output, EventEmitter } from '@angular/core';
 import { loadModules } from 'esri-loader';
 import esri = __esri;
@@ -32,13 +19,10 @@ export class EsriMapComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    this.initializeMap();
-  }
+  async ngOnInit() {this.initializeMap(); }
 
   async initializeMap() {
     try {
-
       const [EsriMap, EsriMapView, Zoom, Search, BasemapGallery, Expand] = await loadModules([
         'esri/Map',
         'esri/views/MapView',
@@ -47,11 +31,7 @@ export class EsriMapComponent implements OnInit {
         'esri/widgets/BasemapGallery',
         'esri/widgets/Expand'
       ]);
-
-      const mapProperties: esri.MapProperties = {
-        basemap: this._basemap
-      };
-
+      const mapProperties: esri.MapProperties = {basemap: this._basemap};
       const map: esri.Map = new EsriMap(mapProperties);
       const mapViewProperties: esri.MapViewProperties = {
         container: this.mapViewEl.nativeElement,
@@ -59,49 +39,28 @@ export class EsriMapComponent implements OnInit {
         zoom: this._zoom,
         map: map
       };
-
       let mapView: esri.MapView = new EsriMapView(mapViewProperties);
       mapView.ui.remove('zoom');
-      mapView.when(() => {
-        this.mapLoaded.emit(true);
-      });
-
-      this.zoom = new Zoom({
-        viewModel: {
-          view: mapView
-        }
-      });
-
-      const searchWidget = new Search({
-        view: mapView
-      });
-
+      mapView.when(() => {this.mapLoaded.emit(true);});
+      this.zoom = new Zoom({viewModel: {view: mapView}});
+      const searchWidget = new Search({view: mapView});
       const basemapGallery = new BasemapGallery({
         view: mapView,
         container: document.createElement("div")
       });
-
       const bgExpand = new Expand({
         view: mapView,
         content: basemapGallery
       });
-
       mapView.ui.add(searchWidget, 'top-right');
       mapView.ui.add(bgExpand, 'top-left');
-
     } catch (error) {
       alert('se produjo un error');
       console.log('error : ' + error);
     }
-
   }
 
-  async setZoomIn() {
-    this.zoom.zoomIn();
-  }
-
-  async setZoomOut() {
-    this.zoom.zoomOut();
-  }
+  async setZoomIn() {this.zoom.zoomIn();}
+  async setZoomOut() {this.zoom.zoomOut();}
 
 }
