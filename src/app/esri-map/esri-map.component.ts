@@ -39,12 +39,13 @@ export class EsriMapComponent implements OnInit {
   async initializeMap() {
     try {
 
-      const [EsriMap, EsriMapView, Zoom, Search, BasemapGallery] = await loadModules([
+      const [EsriMap, EsriMapView, Zoom, Search, BasemapGallery, Expand] = await loadModules([
         'esri/Map',
         'esri/views/MapView',
         'esri/widgets/Zoom',
         'esri/widgets/Search',
-        'esri/widgets/BasemapGallery'
+        'esri/widgets/BasemapGallery',
+        'esri/widgets/Expand'
       ]);
 
       const mapProperties: esri.MapProperties = {
@@ -76,19 +77,21 @@ export class EsriMapComponent implements OnInit {
       });
 
       const basemapGallery = new BasemapGallery({
-        view: mapView
+        view: mapView,
+        container: document.createElement("div")
       });
 
-      mapView.ui.add(searchWidget, {
-        position: 'top-right'
+      const bgExpand = new Expand({
+        view: mapView,
+        content: basemapGallery
       });
 
-      mapView.ui.add(basemapGallery, {
-        position: 'top-left'
-      });
+      mapView.ui.add(searchWidget, 'top-right');
+      mapView.ui.add(bgExpand, 'top-left');
 
     } catch (error) {
-      console.log('We have an error: ' + error);
+      alert('se produjo un error');
+      console.log('error : ' + error);
     }
 
   }
