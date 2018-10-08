@@ -39,10 +39,12 @@ export class EsriMapComponent implements OnInit {
   async initializeMap() {
     try {
 
-      const [EsriMap, EsriMapView, Zoom] = await loadModules([
+      const [EsriMap, EsriMapView, Zoom, Search, BasemapGallery] = await loadModules([
         'esri/Map',
         'esri/views/MapView',
-        'esri/widgets/Zoom'
+        'esri/widgets/Zoom',
+        'esri/widgets/Search',
+        'esri/widgets/BasemapGallery'
       ]);
 
       const mapProperties: esri.MapProperties = {
@@ -57,7 +59,7 @@ export class EsriMapComponent implements OnInit {
         map: map
       };
 
-      const mapView: esri.MapView = new EsriMapView(mapViewProperties);
+      let mapView: esri.MapView = new EsriMapView(mapViewProperties);
       mapView.ui.remove('zoom');
       mapView.when(() => {
         this.mapLoaded.emit(true);
@@ -67,6 +69,22 @@ export class EsriMapComponent implements OnInit {
         viewModel: {
           view: mapView
         }
+      });
+
+      const searchWidget = new Search({
+        view: mapView
+      });
+
+      const basemapGallery = new BasemapGallery({
+        view: mapView
+      });
+
+      mapView.ui.add(searchWidget, {
+        position: 'top-right'
+      });
+
+      mapView.ui.add(basemapGallery, {
+        position: 'top-left'
       });
 
     } catch (error) {
