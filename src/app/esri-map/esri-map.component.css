@@ -1,0 +1,100 @@
+/* import the required JSAPI css */
+@import 'https://js.arcgis.com/4.9/esri/css/main.css';
+
+.esri-view {
+  height: 100vh;
+  width: 100vw;
+}
+
+.zoom {
+  position: absolute;
+  bottom: 35px;
+  left: 15px;
+}
+
+.zoom-btns {
+  float: left;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.button {
+  display: inline-block;
+  position: relative;
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 2em;
+  background-color: #fff;
+  color: #646464;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.button.circle {
+  border-radius: 50%;
+}
+
+.button:hover {
+  opacity: 0.8;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.button.raised {
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.2s;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.button.raised:active {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+  transition-delay: 0s;
+}
+
+.disable {
+  opacity: 0.8;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.disable:hover {
+  opacity: 0.8;
+  color: rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+}
+
+.material-icons {
+  font-size: 1.2em;
+  line-height: 50px;
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.view-info {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v41/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
