@@ -48,10 +48,7 @@ export class EsriMapComponent implements OnInit {
         view: mapView,
         container: document.createElement("div")
       });
-      const bgExpand = new Expand({
-        view: mapView,
-        content: basemapGallery
-      });
+      const bgExpand = new Expand({view: mapView, content: basemapGallery});
       mapView.ui.add(searchWidget, 'top-right');
       mapView.ui.add(bgExpand, 'top-left');
     } catch (error) {
