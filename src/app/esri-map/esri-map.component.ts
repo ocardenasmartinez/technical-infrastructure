@@ -18,9 +18,7 @@ export class EsriMapComponent implements OnInit {
   private zoom;
 
   constructor() { }
-
   async ngOnInit() {this.initializeMap();}
-
   async initializeMap() {
     try {
       const [EsriMap, EsriMapView, Zoom, Search, BasemapGallery, Expand] = await loadModules([
@@ -48,9 +46,9 @@ export class EsriMapComponent implements OnInit {
         view: mapView,
         container: document.createElement("div")
       });
-      const bgExpand = new Expand({view: mapView, content: basemapGallery});
+      const expand = new Expand({view: mapView, content: basemapGallery});
       mapView.ui.add(searchWidget, 'top-right');
-      mapView.ui.add(bgExpand, 'top-left');
+      mapView.ui.add(expand, 'top-left');
     } catch (error) {
       alert('se produjo un error');
       console.log('error : ' + error);
