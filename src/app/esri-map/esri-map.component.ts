@@ -51,7 +51,6 @@ export class EsriMapComponent implements OnInit {
       mapView.ui.add(expand, 'top-left');
     } catch (error) {
       alert('se produjo un error');
-      console.log('error : ' + error);
     }
   }
 
