@@ -21,13 +21,14 @@ export class EsriMapComponent implements OnInit {
   async ngOnInit() {this.initializeMap();}
   async initializeMap() {
     try {
-      const [EsriMap, EsriMapView, Zoom, Search, BasemapGallery, Expand] = await loadModules([
+      const [EsriMap, EsriMapView, Zoom, Search, BasemapGallery, Expand, FeatureLayer] = await loadModules([
         'esri/Map',
         'esri/views/MapView',
         'esri/widgets/Zoom',
         'esri/widgets/Search',
         'esri/widgets/BasemapGallery',
-        'esri/widgets/Expand'
+        'esri/widgets/Expand',
+        'esri/layers/FeatureLayer'
       ]);
       const mapProperties: esri.MapProperties = {basemap: this._basemap};
       const map: esri.Map = new EsriMap(mapProperties);
@@ -41,7 +42,9 @@ export class EsriMapComponent implements OnInit {
       mapView.ui.remove('zoom');
       mapView.when(() => {this.mapLoaded.emit(true);});
       this.zoom = new Zoom({viewModel: {view: mapView}});
-      const searchWidget = new Search({view: mapView});
+      const searchWidget = new Search({
+        view: mapView
+      });
       const basemapGallery = new BasemapGallery({
         view: mapView,
         container: document.createElement("div")
@@ -49,8 +52,122 @@ export class EsriMapComponent implements OnInit {
       const expand = new Expand({view: mapView, content: basemapGallery});
       mapView.ui.add(searchWidget, 'top-right');
       mapView.ui.add(expand, 'top-left');
+      const nodosTelsur = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/FO_Red_Critica/MapServer/0"
+      });
+      const trazadoTelsurProject = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/FO_Red_Critica/MapServer/1"
+      });
+      const trazadoTelsur  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/FO_Red_Critica/MapServer/3"
+      });
+
+      const BorradorIC1Macrozonacentronorte_Wom  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const BorradorIC1Macrozonacentronorte_Will  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const BorradorIC1Macrozonacentronorte_VTRBandaAncha  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const BorradorIC1Macrozonacentronorte_TelefonicaChile  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const BorradorIC1Macrozonacentronorte_Movistar  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const BorradorIC1Macrozonacentronorte_EntelPhone  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const BorradorIC1Macrozonacentronorte_EntelPCS  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const BorradorIC1Macrozonacentronorte_ClaroComunicaciones  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const BorradorIC1Macrozonacentronorte_ClaroChile  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const BorradorIC1Macrozonanorte_Wom  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const BorradorIC1Macrozonanorte_Will  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const BorradorIC1Macrozonanorte_VtrBandaAncha  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const BorradorIC1Macrozonanorte_TelefonicaChile  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const BorradorIC1Macrozonanorte_Movistar  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const BorradorIC1Macrozonanorte_EntelPhone  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const BorradorIC1Macrozonanorte_EntelPCS  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const BorradorIC1Macrozonanorte_ClaroComunicaciones  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const BorradorIC1Macrozonanorte_ClaroChile  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const IC1_IC2_2016_2020  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      const IC1_PLANFISCA_N5MAYO  = new FeatureLayer({
+        url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
+      });
+
+      mapView.map.add(nodosTelsur);
+      mapView.map.add(trazadoTelsurProject);
+      mapView.map.add(trazadoTelsur);
+      mapView.map.add(BorradorIC1Macrozonacentronorte_Wom);
+      mapView.map.add(BorradorIC1Macrozonacentronorte_Will);
+      mapView.map.add(BorradorIC1Macrozonacentronorte_VTRBandaAncha);
+      mapView.map.add(BorradorIC1Macrozonacentronorte_TelefonicaChile);
+      mapView.map.add(BorradorIC1Macrozonacentronorte_Movistar);
+      mapView.map.add(BorradorIC1Macrozonacentronorte_EntelPhone);
+      mapView.map.add(BorradorIC1Macrozonacentronorte_EntelPCS);
+      mapView.map.add(BorradorIC1Macrozonacentronorte_ClaroComunicaciones);
+      mapView.map.add(BorradorIC1Macrozonacentronorte_ClaroChile);
+      mapView.map.add(BorradorIC1Macrozonanorte_Wom);
+      mapView.map.add(BorradorIC1Macrozonanorte_Will);
+      mapView.map.add(BorradorIC1Macrozonanorte_VtrBandaAncha);
+      mapView.map.add(BorradorIC1Macrozonanorte_TelefonicaChile);
+      mapView.map.add(BorradorIC1Macrozonanorte_Movistar);
+      mapView.map.add(BorradorIC1Macrozonanorte_EntelPhone);
+      mapView.map.add(BorradorIC1Macrozonanorte_EntelPCS);
+      mapView.map.add(BorradorIC1Macrozonanorte_ClaroComunicaciones);
+      mapView.map.add(BorradorIC1Macrozonanorte_ClaroChile);
+      mapView.map.add(IC1_IC2_2016_2020);
+      mapView.map.add(IC1_PLANFISCA_N5MAYO);
     } catch (error) {
       alert('se produjo un error');
+      console.log('error: ' + error);
     }
   }
 
