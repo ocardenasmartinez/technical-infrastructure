@@ -62,75 +62,75 @@ export class EsriMapComponent implements OnInit {
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/FO_Red_Critica/MapServer/3"
       });
 
-      const BorradorIC1Macrozonacentronorte_Wom  = new FeatureLayer({
+      const BorradorIC1MacrozonacentronorteWom  = new FeatureLayer({
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
       });
 
-      const BorradorIC1Macrozonacentronorte_Will  = new FeatureLayer({
+      const BorradorIC1MacrozonacentronorteWill  = new FeatureLayer({
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
       });
 
-      const BorradorIC1Macrozonacentronorte_VTRBandaAncha  = new FeatureLayer({
+      const BorradorIC1MacrozonacentronorteVtRBandaAncha  = new FeatureLayer({
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
       });
 
-      const BorradorIC1Macrozonacentronorte_TelefonicaChile  = new FeatureLayer({
+      const BorradorIC1MacrozonacentronorteTelefonicaChile  = new FeatureLayer({
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
       });
 
-      const BorradorIC1Macrozonacentronorte_Movistar  = new FeatureLayer({
+      const BorradorIC1MacrozonacentronorteMovistar  = new FeatureLayer({
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
       });
 
-      const BorradorIC1Macrozonacentronorte_EntelPhone  = new FeatureLayer({
+      const BorradorIC1MacrozonacentronorteEntelPhone  = new FeatureLayer({
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
       });
 
-      const BorradorIC1Macrozonacentronorte_EntelPCS  = new FeatureLayer({
+      const BorradorIC1MacrozonacentronorteEntelPCS  = new FeatureLayer({
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
       });
 
-      const BorradorIC1Macrozonacentronorte_ClaroComunicaciones  = new FeatureLayer({
+      const BorradorIC1MacrozonacentronorteClaroComunicaciones  = new FeatureLayer({
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
       });
 
-      const BorradorIC1Macrozonacentronorte_ClaroChile  = new FeatureLayer({
+      const BorradorIC1MacrozonacentronorteClaroChile  = new FeatureLayer({
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
       });
 
-      const BorradorIC1Macrozonanorte_Wom  = new FeatureLayer({
+      const BorradorIC1MacrozonanorteWom  = new FeatureLayer({
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
       });
 
-      const BorradorIC1Macrozonanorte_Will  = new FeatureLayer({
+      const BorradorIC1MacrozonanorteWill  = new FeatureLayer({
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
       });
 
-      const BorradorIC1Macrozonanorte_VtrBandaAncha  = new FeatureLayer({
+      const BorradorIC1MacrozonanorteVtrBandaAncha  = new FeatureLayer({
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
       });
 
-      const BorradorIC1Macrozonanorte_TelefonicaChile  = new FeatureLayer({
+      const BorradorIC1MacrozonanorteTelefonicaChile  = new FeatureLayer({
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
       });
 
-      const BorradorIC1Macrozonanorte_Movistar  = new FeatureLayer({
+      const BorradorIC1MacrozonanorteMovistar  = new FeatureLayer({
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
       });
 
-      const BorradorIC1Macrozonanorte_EntelPhone  = new FeatureLayer({
+      const BorradorIC1MacrozonanorteEntelPhone  = new FeatureLayer({
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
       });
 
-      const BorradorIC1Macrozonanorte_EntelPCS  = new FeatureLayer({
+      const BorradorIC1MacrozonanorteEntelPCS  = new FeatureLayer({
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
       });
 
-      const BorradorIC1Macrozonanorte_ClaroComunicaciones  = new FeatureLayer({
+      const BorradorIC1MacrozonanorteClaroComunicaciones  = new FeatureLayer({
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
       });
 
-      const BorradorIC1Macrozonanorte_ClaroChile  = new FeatureLayer({
+      const BorradorIC1MacrozonanorteClaroChile  = new FeatureLayer({
         url: "http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0"
       });
 
@@ -145,24 +145,24 @@ export class EsriMapComponent implements OnInit {
       mapView.map.add(nodosTelsur);
       mapView.map.add(trazadoTelsurProject);
       mapView.map.add(trazadoTelsur);
-      mapView.map.add(BorradorIC1Macrozonacentronorte_Wom);
-      mapView.map.add(BorradorIC1Macrozonacentronorte_Will);
-      mapView.map.add(BorradorIC1Macrozonacentronorte_VTRBandaAncha);
-      mapView.map.add(BorradorIC1Macrozonacentronorte_TelefonicaChile);
-      mapView.map.add(BorradorIC1Macrozonacentronorte_Movistar);
-      mapView.map.add(BorradorIC1Macrozonacentronorte_EntelPhone);
-      mapView.map.add(BorradorIC1Macrozonacentronorte_EntelPCS);
-      mapView.map.add(BorradorIC1Macrozonacentronorte_ClaroComunicaciones);
-      mapView.map.add(BorradorIC1Macrozonacentronorte_ClaroChile);
-      mapView.map.add(BorradorIC1Macrozonanorte_Wom);
-      mapView.map.add(BorradorIC1Macrozonanorte_Will);
-      mapView.map.add(BorradorIC1Macrozonanorte_VtrBandaAncha);
-      mapView.map.add(BorradorIC1Macrozonanorte_TelefonicaChile);
-      mapView.map.add(BorradorIC1Macrozonanorte_Movistar);
-      mapView.map.add(BorradorIC1Macrozonanorte_EntelPhone);
-      mapView.map.add(BorradorIC1Macrozonanorte_EntelPCS);
-      mapView.map.add(BorradorIC1Macrozonanorte_ClaroComunicaciones);
-      mapView.map.add(BorradorIC1Macrozonanorte_ClaroChile);
+      mapView.map.add(BorradorIC1MacrozonacentronorteWom);
+      mapView.map.add(BorradorIC1MacrozonacentronorteWill);
+      mapView.map.add(BorradorIC1MacrozonacentronorteVtRBandaAncha);
+      mapView.map.add(BorradorIC1MacrozonacentronorteTelefonicaChile);
+      mapView.map.add(BorradorIC1MacrozonacentronorteMovistar);
+      mapView.map.add(BorradorIC1MacrozonacentronorteEntelPhone);
+      mapView.map.add(BorradorIC1MacrozonacentronorteEntelPCS);
+      mapView.map.add(BorradorIC1MacrozonacentronorteClaroComunicaciones);
+      mapView.map.add(BorradorIC1MacrozonacentronorteClaroChile);
+      mapView.map.add(BorradorIC1MacrozonanorteWom);
+      mapView.map.add(BorradorIC1MacrozonanorteWill);
+      mapView.map.add(BorradorIC1MacrozonanorteVtrBandaAncha);
+      mapView.map.add(BorradorIC1MacrozonanorteTelefonicaChile);
+      mapView.map.add(BorradorIC1MacrozonanorteMovistar);
+      mapView.map.add(BorradorIC1MacrozonanorteEntelPhone);
+      mapView.map.add(BorradorIC1MacrozonanorteEntelPCS);
+      mapView.map.add(BorradorIC1MacrozonanorteClaroComunicaciones);
+      mapView.map.add(BorradorIC1MacrozonanorteClaroChile);
       mapView.map.add(IC1_IC2_2016_2020);
       mapView.map.add(IC1_PLANFISCA_N5MAYO);
     } catch (error) {
