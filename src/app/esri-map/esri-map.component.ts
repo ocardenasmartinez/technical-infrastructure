@@ -17,6 +17,7 @@ export class EsriMapComponent implements OnInit {
   private _center: Array<number> = [-70.6514212, -33.440616];
   private _basemap: string = 'streets-relief-vector';
   private zoom;
+  private mapView: esri.MapView;
 
   constructor() { }
   async ngOnInit() {this.initializeMap();}
@@ -45,24 +46,22 @@ export class EsriMapComponent implements OnInit {
         map: map
       };
 
-
-
-      let mapView: esri.MapView = new EsriMapView(mapViewProperties);
+      this.mapView = new EsriMapView(mapViewProperties);
 
       const basemapGallery = new BasemapGallery({
-        view: mapView,
+        view: this.mapView,
         container: document.createElement("div")
       });
-      const expand = new Expand({view: mapView, content: basemapGallery});
+      const expand = new Expand({view: this.mapView, content: basemapGallery});
 
       const layerList = new LayerList({
-        view: mapView
+        view: this.mapView
       });
 
-      mapView.when(() => {this.mapLoaded.emit(true);});
+      this.mapView.when(() => {this.mapLoaded.emit(true);});
 
       const searchWidget = new Search({
-        view: mapView,
+        view: this.mapView,
         sources: [{
           featureLayer: new FeatureLayer({
             url: urlConstants.NODOS_TELSUR,
@@ -160,32 +159,32 @@ export class EsriMapComponent implements OnInit {
       const IC1_IC2_2016_2020  = new FeatureLayer({url: urlConstants.IC1_IC2_2016_2020});
       const IC1_PLANFISCA_N5MAYO  = new FeatureLayer({url: urlConstants.IC1_PLANFISCA_N5MAYO});
 
-      mapView.map.add(nodosTelsur);
-      mapView.map.add(trazadoTelsurProject);
-      mapView.map.add(trazadoTelsur);
-      mapView.map.add(borradorIC1MacrozonacentronorteWom);
-      mapView.map.add(borradorIC1MacrozonacentronorteWill);
-      mapView.map.add(borradorIC1MacrozonacentronorteVtRBandaAncha);
-      mapView.map.add(borradorIC1MacrozonacentronorteTelefonicaChile);
-      mapView.map.add(borradorIC1MacrozonacentronorteMovistar);
-      mapView.map.add(borradorIC1MacrozonacentronorteEntelPhone);
-      mapView.map.add(borradorIC1MacrozonacentronorteEntelPCS);
-      mapView.map.add(borradorIC1MacrozonacentronorteClaroComunicaciones);
-      mapView.map.add(borradorIC1MacrozonacentronorteClaroChile);
-      mapView.map.add(borradorIC1MacrozonanorteWom);
-      mapView.map.add(borradorIC1MacrozonanorteWill);
-      mapView.map.add(borradorIC1MacrozonanorteVtrBandaAncha);
-      mapView.map.add(borradorIC1MacrozonanorteTelefonicaChile);
-      mapView.map.add(borradorIC1MacrozonanorteMovistar);
-      mapView.map.add(borradorIC1MacrozonanorteEntelPhone);
-      mapView.map.add(borradorIC1MacrozonanorteEntelPCS);
-      mapView.map.add(borradorIC1MacrozonanorteClaroComunicaciones);
-      mapView.map.add(borradorIC1MacrozonanorteClaroChile);
-      mapView.map.add(IC1_IC2_2016_2020);
-      mapView.map.add(IC1_PLANFISCA_N5MAYO);
-      mapView.ui.add(searchWidget, 'top-right');
-      mapView.ui.add(expand, 'top-left');
-      mapView.ui.add(layerList, 'top-left');
+      this.mapView.map.add(nodosTelsur);
+      this.mapView.map.add(trazadoTelsurProject);
+      this.mapView.map.add(trazadoTelsur);
+      this.mapView.map.add(borradorIC1MacrozonacentronorteWom);
+      this.mapView.map.add(borradorIC1MacrozonacentronorteWill);
+      this.mapView.map.add(borradorIC1MacrozonacentronorteVtRBandaAncha);
+      this.mapView.map.add(borradorIC1MacrozonacentronorteTelefonicaChile);
+      this.mapView.map.add(borradorIC1MacrozonacentronorteMovistar);
+      this.mapView.map.add(borradorIC1MacrozonacentronorteEntelPhone);
+      this.mapView.map.add(borradorIC1MacrozonacentronorteEntelPCS);
+      this.mapView.map.add(borradorIC1MacrozonacentronorteClaroComunicaciones);
+      this.mapView.map.add(borradorIC1MacrozonacentronorteClaroChile);
+      this.mapView.map.add(borradorIC1MacrozonanorteWom);
+      this.mapView.map.add(borradorIC1MacrozonanorteWill);
+      this.mapView.map.add(borradorIC1MacrozonanorteVtrBandaAncha);
+      this.mapView.map.add(borradorIC1MacrozonanorteTelefonicaChile);
+      this.mapView.map.add(borradorIC1MacrozonanorteMovistar);
+      this.mapView.map.add(borradorIC1MacrozonanorteEntelPhone);
+      this.mapView.map.add(borradorIC1MacrozonanorteEntelPCS);
+      this.mapView.map.add(borradorIC1MacrozonanorteClaroComunicaciones);
+      this.mapView.map.add(borradorIC1MacrozonanorteClaroChile);
+      this.mapView.map.add(IC1_IC2_2016_2020);
+      this.mapView.map.add(IC1_PLANFISCA_N5MAYO);
+      this.mapView.ui.add(searchWidget, 'top-right');
+      this.mapView.ui.add(expand, 'top-left');
+      this.mapView.ui.add(layerList, 'top-left');
 
     } catch (error) {
       alert('se produjo un error');
