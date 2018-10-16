@@ -71,13 +71,14 @@ export class EsriMapComponent implements OnInit {
 
   async setLayers() {
 
-    const [FeatureLayer] = await loadModules([
-      'esri/layers/FeatureLayer'
+    const [FeatureLayer, GroupLayer] = await loadModules([
+      'esri/layers/FeatureLayer',
+      'esri/layers/GroupLayer'
     ]);
 
     const nodosTelsur = new FeatureLayer({
       url: urlConstants.NODOS_TELSUR,
-      title: 'Nodos Telesur 2'
+      title: 'Nodos Telesur'
     });
     const trazadoTelsurProject = new FeatureLayer({
       url: urlConstants.TRAZADO_TELSUR_PROJECT,
@@ -168,7 +169,21 @@ export class EsriMapComponent implements OnInit {
       title: 'IC1 PLAN FISCA N5 MAYO'
     });
 
-    this.mapView.map.add(IC1_IC2_2016_2020);
+    const groupLayer = new GroupLayer({
+        title: "US Demographics",
+        visible: true,
+        visibilityMode: "exclusive",
+        layers: [nodosTelsur, trazadoTelsurProject, trazadoTelsur, borradorIC1MacrozonacentronorteWom, borradorIC1MacrozonacentronorteWill,
+           borradorIC1MacrozonacentronorteVtRBandaAncha, borradorIC1MacrozonacentronorteTelefonicaChile, borradorIC1MacrozonacentronorteMovistar,
+           borradorIC1MacrozonacentronorteEntelPhone, borradorIC1MacrozonacentronorteEntelPCS, borradorIC1MacrozonacentronorteClaroComunicaciones,
+           borradorIC1MacrozonacentronorteClaroChile, borradorIC1MacrozonanorteWom, borradorIC1MacrozonanorteWill, borradorIC1MacrozonanorteVtrBandaAncha,
+           borradorIC1MacrozonanorteTelefonicaChile, borradorIC1MacrozonanorteMovistar, borradorIC1MacrozonanorteEntelPhone, borradorIC1MacrozonanorteEntelPCS,
+           borradorIC1MacrozonanorteClaroComunicaciones, borradorIC1MacrozonanorteClaroChile, IC1_IC2_2016_2020, IC1_PLANFISCA_N5MAYO]
+    });
+
+    this.mapView.map.add(groupLayer);
+
+    /*this.mapView.map.add(IC1_IC2_2016_2020);
     this.mapView.map.add(IC1_PLANFISCA_N5MAYO);
     this.mapView.map.add(borradorIC1MacrozonanorteClaroChile);
     this.mapView.map.add(borradorIC1MacrozonanorteClaroComunicaciones);
@@ -190,7 +205,7 @@ export class EsriMapComponent implements OnInit {
     this.mapView.map.add(borradorIC1MacrozonacentronorteWom);
     this.mapView.map.add(trazadoTelsur);
     this.mapView.map.add(trazadoTelsurProject);
-    this.mapView.map.add(nodosTelsur);
+    this.mapView.map.add(nodosTelsur);*/
 
   }
 
