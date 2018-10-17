@@ -194,7 +194,7 @@ export class EsriMapComponent implements OnInit {
 
     const searchWidget = new Search({
       view: this.mapView,
-      sources: [{
+        sources: [{
         featureLayer: new FeatureLayer({
           url: urlConstants.NODOS_TELSUR,
           outFields: ["*"]
