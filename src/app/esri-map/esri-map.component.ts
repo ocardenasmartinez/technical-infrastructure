@@ -90,7 +90,7 @@ export class EsriMapComponent implements OnInit {
     });
     const borradorIC1MacrozonacentronorteWom  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_WOM,
-      title: 'Trazado Telesur'
+      title: 'Macro Zona Centro Norte Wom'
     });
     const borradorIC1MacrozonacentronorteWill  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_WILL,
@@ -170,42 +170,18 @@ export class EsriMapComponent implements OnInit {
     });
 
     const groupLayer = new GroupLayer({
-        title: "US Demographics",
+        title: "Infraestructura Tecnologica",
         visible: true,
-        visibilityMode: "exclusive",
-        layers: [nodosTelsur, trazadoTelsurProject, trazadoTelsur, borradorIC1MacrozonacentronorteWom, borradorIC1MacrozonacentronorteWill,
-           borradorIC1MacrozonacentronorteVtRBandaAncha, borradorIC1MacrozonacentronorteTelefonicaChile, borradorIC1MacrozonacentronorteMovistar,
-           borradorIC1MacrozonacentronorteEntelPhone, borradorIC1MacrozonacentronorteEntelPCS, borradorIC1MacrozonacentronorteClaroComunicaciones,
-           borradorIC1MacrozonacentronorteClaroChile, borradorIC1MacrozonanorteWom, borradorIC1MacrozonanorteWill, borradorIC1MacrozonanorteVtrBandaAncha,
-           borradorIC1MacrozonanorteTelefonicaChile, borradorIC1MacrozonanorteMovistar, borradorIC1MacrozonanorteEntelPhone, borradorIC1MacrozonanorteEntelPCS,
-           borradorIC1MacrozonanorteClaroComunicaciones, borradorIC1MacrozonanorteClaroChile, IC1_IC2_2016_2020, IC1_PLANFISCA_N5MAYO]
+        visibilityMode: "independent",
+        layers: [IC1_PLANFISCA_N5MAYO, IC1_IC2_2016_2020, borradorIC1MacrozonanorteClaroChile, borradorIC1MacrozonanorteClaroComunicaciones,
+          borradorIC1MacrozonanorteEntelPCS, borradorIC1MacrozonanorteEntelPhone, borradorIC1MacrozonanorteMovistar, borradorIC1MacrozonanorteTelefonicaChile,
+          borradorIC1MacrozonanorteVtrBandaAncha, borradorIC1MacrozonanorteWill, borradorIC1MacrozonanorteWom, borradorIC1MacrozonacentronorteClaroChile,
+          borradorIC1MacrozonacentronorteClaroComunicaciones, borradorIC1MacrozonacentronorteEntelPCS, borradorIC1MacrozonacentronorteEntelPhone,
+          borradorIC1MacrozonacentronorteMovistar, borradorIC1MacrozonacentronorteTelefonicaChile, borradorIC1MacrozonacentronorteVtRBandaAncha,
+          borradorIC1MacrozonacentronorteWill, borradorIC1MacrozonacentronorteWom, trazadoTelsur, trazadoTelsurProject, nodosTelsur]
     });
 
     this.mapView.map.add(groupLayer);
-
-    /*this.mapView.map.add(IC1_IC2_2016_2020);
-    this.mapView.map.add(IC1_PLANFISCA_N5MAYO);
-    this.mapView.map.add(borradorIC1MacrozonanorteClaroChile);
-    this.mapView.map.add(borradorIC1MacrozonanorteClaroComunicaciones);
-    this.mapView.map.add(borradorIC1MacrozonanorteEntelPCS);
-    this.mapView.map.add(borradorIC1MacrozonanorteEntelPhone);
-    this.mapView.map.add(borradorIC1MacrozonanorteMovistar);
-    this.mapView.map.add(borradorIC1MacrozonanorteTelefonicaChile);
-    this.mapView.map.add(borradorIC1MacrozonanorteVtrBandaAncha);
-    this.mapView.map.add(borradorIC1MacrozonanorteWill);
-    this.mapView.map.add(borradorIC1MacrozonanorteWom);
-    this.mapView.map.add(borradorIC1MacrozonacentronorteClaroChile);
-    this.mapView.map.add(borradorIC1MacrozonacentronorteClaroComunicaciones);
-    this.mapView.map.add(borradorIC1MacrozonacentronorteEntelPCS);
-    this.mapView.map.add(borradorIC1MacrozonacentronorteEntelPhone);
-    this.mapView.map.add(borradorIC1MacrozonacentronorteMovistar);
-    this.mapView.map.add(borradorIC1MacrozonacentronorteTelefonicaChile);
-    this.mapView.map.add(borradorIC1MacrozonacentronorteVtRBandaAncha);
-    this.mapView.map.add(borradorIC1MacrozonacentronorteWill);
-    this.mapView.map.add(borradorIC1MacrozonacentronorteWom);
-    this.mapView.map.add(trazadoTelsur);
-    this.mapView.map.add(trazadoTelsurProject);
-    this.mapView.map.add(nodosTelsur);*/
 
   }
 
