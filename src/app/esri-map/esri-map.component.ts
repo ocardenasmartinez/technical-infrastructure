@@ -15,7 +15,7 @@ export class EsriMapComponent implements OnInit {
 
   private _zoom: number = 8;
   private _center: Array<number> = [-70.6514212, -33.440616];
-  private _basemap: string = 'streets-relief-vector';
+  private _basemap: string = 'streets';
   private zoom;
   private mapView: esri.MapView;
 
