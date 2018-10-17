@@ -170,7 +170,7 @@ export class EsriMapComponent implements OnInit {
     });
 
     const groupLayer = new GroupLayer({
-        title: "Infraestructura Tecnologica",
+        title: "Infraestructura Crítica",
         visible: true,
         visibilityMode: "independent",
         layers: [IC1_PLANFISCA_N5MAYO, IC1_IC2_2016_2020, borradorIC1MacrozonanorteClaroChile, borradorIC1MacrozonanorteClaroComunicaciones,
