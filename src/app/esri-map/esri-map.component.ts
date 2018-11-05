@@ -76,13 +76,130 @@ export class EsriMapComponent implements OnInit {
       'esri/layers/GroupLayer'
     ]);
 
+    const templateFORedCritica = {
+      title: "Nodos Telesur",
+      content: [{
+        type: "fields",
+        fieldInfos: [{
+          fieldName: "Name",
+          label: "Nombre",
+          visible: true
+        }]
+      }]
+    };
+
+    const templateInfraestructuraCritica = {
+        title: "Infraestructura Crítica",
+        content: [{
+          type: "fields",
+          fieldInfos: [{
+            fieldName: "SERVICIO",
+            label: "Servicio",
+            visible: true
+          },{
+            fieldName: "OPERADOR",
+            label: "Operador",
+            visible: true
+          },{
+            fieldName: "NOMBRE_INSTALACIÓN",
+            label: "Nombre Instación",
+            visible: true
+          },{
+            fieldName: "CALLE",
+            label: "Calle",
+            visible: true
+          },{
+            fieldName: "N°",
+            label: "N°",
+            visible: true
+          },{
+            fieldName: "ADICIONALES",
+            label: "Adicionales",
+            visible: true
+          },{
+            fieldName: "REGIÓN",
+            label: "Región",
+            visible: true
+          },{
+            fieldName: "COMUNA",
+            label: "Comuna",
+            visible: true
+          },{
+            fieldName: "CIUDAD",
+            label: "Ciudad",
+            visible: true
+          },{
+            fieldName: "DATUM",
+            label: "Datum",
+            visible: true
+          },{
+            fieldName: "HUSO",
+            label: "Huso",
+            visible: true
+          },{
+            fieldName: "Nemonico_Empresa",
+            label: "Nemonico Empresa",
+            visible: true
+          },{
+            fieldName: "Nemonico_Subtel",
+            label: "Nemonico Subtel",
+            visible: true
+          },{
+            fieldName: "TIPO",
+            label: "Tipo",
+            visible: true
+          },{
+            fieldName: "SUMINISTRADOR",
+            label: "Suministrador",
+            visible: true
+          },{
+            fieldName: "UNIDAD",
+            label: "Unidad",
+            visible: true
+          },{
+            fieldName: "NORMAL",
+            label: "Normal",
+            visible: true
+          },{
+            fieldName: "TIPO_DE_RESPALDO",
+            label: "Tipo De Respaldo",
+            visible: true
+          },{
+            fieldName: "COMBUSTIBLE_DEL_RESPALDO",
+            label: "Combustible Del Respaldo",
+            visible: true
+          },{
+            fieldName: "CAPACIDAD",
+            label: "Capacidad",
+            visible: true
+          },{
+            fieldName: "UNIDAD1",
+            label: "Unidad1",
+            visible: true
+          },{
+            fieldName: "AUTONOMÍA_EN_HORAS",
+            label: "Autonomía En Horas",
+            visible: true
+          },{
+            fieldName: "LONGITUD",
+            label: "Longitud",
+            visible: true
+          },{
+            fieldName: "LATITUD",
+            label: "Latitud",
+            visible: true
+          }]
+      }]
+    };
+
     const nodosTelsur = new FeatureLayer({
       url: urlConstants.NODOS_TELSUR,
       title: 'Nodos Telesur'
     });
     const trazadoTelsurProject = new FeatureLayer({
       url: urlConstants.TRAZADO_TELSUR_PROJECT,
-      title: 'Trazado Telesur Project'
+      title: 'Trazado Telesur Project',
+      popupTemplate: templateFORedCritica
     });
     const trazadoTelsur  = new FeatureLayer({
       url: urlConstants.TRAZADO_TELSUR,
@@ -90,83 +207,103 @@ export class EsriMapComponent implements OnInit {
     });
     const borradorIC1MacrozonacentronorteWom  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_WOM,
-      title: 'Macro Zona Centro Norte Wom'
+      title: 'Macro Zona Centro Norte Wom',
+      popupTemplate: templateInfraestructuraCritica
     });
     const borradorIC1MacrozonacentronorteWill  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_WILL,
-      title: 'Macro Zona Centro Norte Will'
+      title: 'Macro Zona Centro Norte Will',
+      popupTemplate: templateInfraestructuraCritica
     });
     const borradorIC1MacrozonacentronorteVtRBandaAncha  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_VTR_BANDA_ANCHA,
-      title: 'Macro Zona Centro Norte VTR Banda Ancha'
+      title: 'Macro Zona Centro Norte VTR Banda Ancha',
+      popupTemplate: templateInfraestructuraCritica
     });
     const borradorIC1MacrozonacentronorteTelefonicaChile  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_TELEFONICA_CHILE,
-      title: 'Macro Zona Centro Norte Teléfonica Chile'
+      title: 'Macro Zona Centro Norte Teléfonica Chile',
+      popupTemplate: templateInfraestructuraCritica
     });
     const borradorIC1MacrozonacentronorteMovistar  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_MOVISTAR,
-      title: 'Macro Zona Centro Norte Movistar'
+      title: 'Macro Zona Centro Norte Movistar',
+      popupTemplate: templateInfraestructuraCritica
     });
     const borradorIC1MacrozonacentronorteEntelPhone  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_ENTEL_PHONE,
-      title: 'Macro Zona Centro Norte Entel Phone'
+      title: 'Macro Zona Centro Norte Entel Phone',
+      popupTemplate: templateInfraestructuraCritica
     });
     const borradorIC1MacrozonacentronorteEntelPCS  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_ENTEL_PCS,
-      title: 'Macro Zona Centro Norte Entel PCS'
+      title: 'Macro Zona Centro Norte Entel PCS',
+      popupTemplate: templateInfraestructuraCritica
     });
     const borradorIC1MacrozonacentronorteClaroComunicaciones  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_CLARO_COMUNICACIONES,
-      title: 'Macro Zona Centro Norte Claro Comunicaciones'
+      title: 'Macro Zona Centro Norte Claro Comunicaciones',
+      popupTemplate: templateInfraestructuraCritica
     });
     const borradorIC1MacrozonacentronorteClaroChile  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_CLARO_CHILE,
-      title: 'Macro Zona Centro Norte Chile'
+      title: 'Macro Zona Centro Norte Chile',
+      popupTemplate: templateInfraestructuraCritica
     });
     const borradorIC1MacrozonanorteWom  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_WOM,
-      title: 'Macro Zona Centro Norte Claro Chile'
+      title: 'Macro Zona Centro Norte Claro Chile',
+      popupTemplate: templateInfraestructuraCritica
     });
     const borradorIC1MacrozonanorteWill  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_WILL,
-      title: 'Macro Zona Norte Will'
+      title: 'Macro Zona Norte Will',
+      popupTemplate: templateInfraestructuraCritica
     });
     const borradorIC1MacrozonanorteVtrBandaAncha  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_VTR_BANDA_ANCHA,
-      title: 'Macro Zona Norte VTR Banda Ancha'
+      title: 'Macro Zona Norte VTR Banda Ancha',
+      popupTemplate: templateInfraestructuraCritica
     });
     const borradorIC1MacrozonanorteTelefonicaChile  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_TELEFONICA_CHILE,
-      title: 'Macro Zona Norte Teléfonica'
+      title: 'Macro Zona Norte Teléfonica',
+      popupTemplate: templateInfraestructuraCritica
     });
     const borradorIC1MacrozonanorteMovistar  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_MOVISTAR,
-      title: 'Macro Zona Norte Movistar'
+      title: 'Macro Zona Norte Movistar',
+      popupTemplate: templateInfraestructuraCritica
     });
     const borradorIC1MacrozonanorteEntelPhone  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_ENTEL_PHONE,
-      title: 'Macro Zona Norte Entel Phone'
+      title: 'Macro Zona Norte Entel Phone',
+      popupTemplate: templateInfraestructuraCritica
     });
     const borradorIC1MacrozonanorteEntelPCS  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_ENTEL_PCS,
-      title: 'Macro Zona Norte Entel PCS'
+      title: 'Macro Zona Norte Entel PCS',
+      popupTemplate: templateInfraestructuraCritica
     });
     const borradorIC1MacrozonanorteClaroComunicaciones  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_CLARO_COMUNICACIONES,
-      title: 'Macro Zona Norte Claro Comunicaciones'
+      title: 'Macro Zona Norte Claro Comunicaciones',
+      popupTemplate: templateInfraestructuraCritica
     });
     const borradorIC1MacrozonanorteClaroChile  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_CLARO_CHILE,
-      title: 'Macro Zona Norte Claro Chile'
+      title: 'Macro Zona Norte Claro Chile',
+      popupTemplate: templateInfraestructuraCritica
     });
     const IC1_IC2_2016_2020  = new FeatureLayer({
       url: urlConstants.IC1_IC2_2016_2020,
-      title: 'IC1 IC2 2016 2020'
+      title: 'IC1 IC2 2016 2020',
+      popupTemplate: templateInfraestructuraCritica
     });
     const IC1_PLANFISCA_N5MAYO  = new FeatureLayer({
       url: urlConstants.IC1_PLANFISCA_N5MAYO,
-      title: 'IC1 PLAN FISCA N5 MAYO'
+      title: 'IC1 PLAN FISCA N5 MAYO',
+      popupTemplate: templateInfraestructuraCritica
     });
 
     const groupLayer = new GroupLayer({
