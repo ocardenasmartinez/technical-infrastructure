@@ -192,6 +192,54 @@ export class EsriMapComponent implements OnInit {
       }]
     };
 
+    const templateCalidadRedMovilDdt = {
+      title: "Calidad Red Movil DDT",
+      content: [{
+        type: "fields",
+        fieldInfos: [{
+          fieldName: "COD_EMPRESA",
+          label: "Empresa",
+          visible: true
+        },{
+          fieldName: "CAES_PERIODO",
+          label: "Caes Periodo",
+          visible: true
+        },{
+          fieldName: "CAES_ESTACION_BASE",
+          label: "Caes Estación Base",
+          visible: true
+        },{
+          fieldName: "TITE_DESCRIPCION",
+          label: "Tite Descripción",
+          visible: true
+        },{
+          fieldName: "TIEM_DESCRIPCION",
+          label: "Tiem Descripción",
+          visible: true
+        },{
+          fieldName: "REGION",
+          label: "Región",
+          visible: true
+        },{
+          fieldName: "COMUNA",
+          label: "Comuna",
+          visible: true
+        },{
+          fieldName: "CAES_DIRECCION",
+          label: "Caes Direccion",
+          visible: true
+        },{
+          fieldName: "LATITUD",
+          label: "Latitud",
+          visible: true
+        },{
+          fieldName: "LONGITUD",
+          label: "Longitud",
+          visible: true
+        }]
+      }]
+    };
+
     const nodosTelsur = new FeatureLayer({
       url: urlConstants.NODOS_TELSUR,
       title: 'Nodos Telesur'
@@ -305,12 +353,27 @@ export class EsriMapComponent implements OnInit {
       title: 'IC1 PLAN FISCA N5 MAYO',
       popupTemplate: templateInfraestructuraCritica
     });
+    const STI_CRM_ESTACIONES  = new FeatureLayer({
+      url: urlConstants.STI_CRM_ESTACIONES,
+      title: 'STI CRM ESTACIONES',
+      popupTemplate: templateCalidadRedMovilDdt
+    });
+    const STI_CBS_SAE  = new FeatureLayer({
+      url: urlConstants.STI_CBS_SAE,
+      title: 'STI CBS SAE',
+      popupTemplate: templateCalidadRedMovilDdt
+    });
+    const STI_CRM_MEDICIONES  = new FeatureLayer({
+      url: urlConstants.STI_CRM_MEDICIONES,
+      title: 'STI CRM MEDICIONES',
+      popupTemplate: templateCalidadRedMovilDdt
+    });
 
     const groupLayer = new GroupLayer({
         title: "Infraestructura Crítica",
         visible: true,
         visibilityMode: "independent",
-        layers: [IC1_PLANFISCA_N5MAYO, IC1_IC2_2016_2020, borradorIC1MacrozonanorteClaroChile, borradorIC1MacrozonanorteClaroComunicaciones,
+        layers: [STI_CRM_ESTACIONES, STI_CBS_SAE, STI_CRM_MEDICIONES, IC1_PLANFISCA_N5MAYO, IC1_IC2_2016_2020, borradorIC1MacrozonanorteClaroChile, borradorIC1MacrozonanorteClaroComunicaciones,
           borradorIC1MacrozonanorteEntelPCS, borradorIC1MacrozonanorteEntelPhone, borradorIC1MacrozonanorteMovistar, borradorIC1MacrozonanorteTelefonicaChile,
           borradorIC1MacrozonanorteVtrBandaAncha, borradorIC1MacrozonanorteWill, borradorIC1MacrozonanorteWom, borradorIC1MacrozonacentronorteClaroChile,
           borradorIC1MacrozonacentronorteClaroComunicaciones, borradorIC1MacrozonacentronorteEntelPCS, borradorIC1MacrozonacentronorteEntelPhone,
@@ -649,6 +712,48 @@ export class EsriMapComponent implements OnInit {
         exactMatch: false,
         name: "IC1 PLAN FISCA N5 MAYO",
         placeholder: "Nombre",
+        maxResults: 6,
+        maxSuggestions: 6,
+        suggestionsEnabled: true,
+        minSuggestCharacters: 0
+      },{
+        featureLayer: new FeatureLayer({
+          url: urlConstants.STI_CRM_ESTACIONES,
+          outFields: ["*"]
+        }),
+        searchFields: ["COD_EMPRESA"],
+        displayField: "COD_EMPRESA",
+        exactMatch: false,
+        name: "STI CRM ESTACIONES",
+        placeholder: "Código Empresa",
+        maxResults: 6,
+        maxSuggestions: 6,
+        suggestionsEnabled: true,
+        minSuggestCharacters: 0
+      },{
+        featureLayer: new FeatureLayer({
+          url: urlConstants.STI_CBS_SAE,
+          outFields: ["*"]
+        }),
+        searchFields: ["COD_EMPRESA"],
+        displayField: "COD_EMPRESA",
+        exactMatch: false,
+        name: "STI CBS SAE",
+        placeholder: "Código Empresa",
+        maxResults: 6,
+        maxSuggestions: 6,
+        suggestionsEnabled: true,
+        minSuggestCharacters: 0
+      },{
+        featureLayer: new FeatureLayer({
+          url: urlConstants.STI_CRM_MEDICIONES,
+          outFields: ["*"]
+        }),
+        searchFields: ["COD_EMPRESA"],
+        displayField: "COD_EMPRESA",
+        exactMatch: false,
+        name: "STI CRM MEDICIONES",
+        placeholder: "Código Empresa",
         maxResults: 6,
         maxSuggestions: 6,
         suggestionsEnabled: true,

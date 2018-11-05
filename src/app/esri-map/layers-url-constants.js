@@ -21,5 +21,8 @@ module.exports = {
   BORRADOR_IC1MACRO_ZONA_NORTE_CLARO_COMUNICACIONES: 'http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/16',
   BORRADOR_IC1MACRO_ZONA_NORTE_CLARO_CHILE: 'http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/17',
   IC1_IC2_2016_2020: 'http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/18',
-  IC1_PLANFISCA_N5MAYO: 'http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/19'
+  IC1_PLANFISCA_N5MAYO: 'http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/19',
+  STI_CRM_ESTACIONES: 'http://copahue.subtel.gob.cl:6080/arcgis/rest/services/STI/CALIDAD_RED_MOVIL_DDT/MapServer/0',
+  STI_CBS_SAE: 'http://copahue.subtel.gob.cl:6080/arcgis/rest/services/STI/CALIDAD_RED_MOVIL_DDT/MapServer/1',
+  STI_CRM_MEDICIONES: 'http://copahue.subtel.gob.cl:6080/arcgis/rest/services/STI/CALIDAD_RED_MOVIL_DDT/MapServer/2',
 }
