@@ -4,7 +4,7 @@ import { EsriMapComponent } from './esri-map/esri-map.component';
 import { OnlyMapComponent } from './only-map/only-map.component';
 
 const routes: Routes = [
-  { path: 'only-map', component: OnlyMapComponent },
+  { path: 'inf-critica', component: OnlyMapComponent },
   { path: 'map', component: EsriMapComponent }
 ];
 
