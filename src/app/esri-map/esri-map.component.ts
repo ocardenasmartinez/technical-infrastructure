@@ -192,7 +192,7 @@ export class EsriMapComponent implements OnInit {
       }]
     };
 
-    const templateCalidadRedMovilDdt = {
+    const templateCalidadRedMovilDdt0 = {
       title: "Calidad Red Movil DDT",
       content: [{
         type: "fields",
@@ -235,6 +235,98 @@ export class EsriMapComponent implements OnInit {
         },{
           fieldName: "LONGITUD",
           label: "Longitud",
+          visible: true
+        }]
+      }]
+    };
+
+    const templateCalidadRedMovilDdt1 = {
+      title: "Calidad Red Movil DDT",
+      content: [{
+        type: "fields",
+        fieldInfos: [{
+          fieldName: "NOMBRE_EMPRESA",
+          label: "Nombre Empresa",
+          visible: true
+        },{
+          fieldName: "CBSA_PERIODO",
+          label: "Cbsa Periodo",
+          visible: true
+        },{
+          fieldName: "CBSA_CELL_ID",
+          label: "Cbsa Cell Id",
+          visible: true
+        },{
+          fieldName: "TITE_COD",
+          label: "Tite Cod",
+          visible: true
+        },{
+          fieldName: "TITE_DESCRIPCION",
+          label: "Tite Descripcion",
+          visible: true
+        },{
+          fieldName: "CBSA_LATITUD",
+          label: "Cbsa Latitud",
+          visible: true
+        },{
+          fieldName: "CBSA_LONGITUD",
+          label: "Cbsa Longitud",
+          visible: true
+        }]
+      }]
+    };
+
+    const templateCalidadRedMovilDdt2 = {
+      title: "Calidad Red Movil DDT",
+      content: [{
+        type: "fields",
+        fieldInfos: [{
+          fieldName: "NOMBRE_EMPRESA",
+          label: "Nombre Empresa",
+          visible: true
+        },{
+          fieldName: "CAME_PERIODO",
+          label: "Came Periodo",
+          visible: true
+        },{
+          fieldName: "CAES_ESTACION_BASE",
+          label: "Caes Estacion Base",
+          visible: true
+        },{
+          fieldName: "RAHO_COD",
+          label: "Raho Cod",
+          visible: true
+        },{
+          fieldName: "PEE",
+          label: "PEE",
+          visible: true
+        },{
+          fieldName: "PFE",
+          label: "PFE",
+          visible: true
+        },{
+          fieldName: "CAME_LLAMADAS_EXITO",
+          label: "Came Llamadas Exito",
+          visible: true
+        },{
+          fieldName: "CAME_INTENTOS_LLAMADA",
+          label: "Came Intentos Llamada",
+          visible: true
+        },{
+          fieldName: "CAME_LLAMADAS_INTERR",
+          label: "Came Intentos Llamada",
+          visible: true
+        },{
+          fieldName: "CAME_TIEMPO_INTERR",
+          label: "Came Tiempo Interr",
+          visible: true
+        },{
+          fieldName: "LATITUD_ESTACION",
+          label: "Latitud Estacion",
+          visible: true
+        },{
+          fieldName: "LONGITUD_ESTACION",
+          label: "Longitud Estacion",
           visible: true
         }]
       }]
@@ -356,17 +448,17 @@ export class EsriMapComponent implements OnInit {
     const STI_CRM_ESTACIONES  = new FeatureLayer({
       url: urlConstants.STI_CRM_ESTACIONES,
       title: 'STI CRM ESTACIONES',
-      popupTemplate: templateCalidadRedMovilDdt
+      popupTemplate: templateCalidadRedMovilDdt0
     });
     const STI_CBS_SAE  = new FeatureLayer({
       url: urlConstants.STI_CBS_SAE,
       title: 'STI CBS SAE',
-      popupTemplate: templateCalidadRedMovilDdt
+      popupTemplate: templateCalidadRedMovilDdt1
     });
     const STI_CRM_MEDICIONES  = new FeatureLayer({
       url: urlConstants.STI_CRM_MEDICIONES,
       title: 'STI CRM MEDICIONES',
-      popupTemplate: templateCalidadRedMovilDdt
+      popupTemplate: templateCalidadRedMovilDdt2
     });
 
     const groupLayer = new GroupLayer({
@@ -735,11 +827,11 @@ export class EsriMapComponent implements OnInit {
           url: urlConstants.STI_CBS_SAE,
           outFields: ["*"]
         }),
-        searchFields: ["COD_EMPRESA"],
-        displayField: "COD_EMPRESA",
+        searchFields: ["NOMBRE_EMPRESA"],
+        displayField: "NOMBRE_EMPRESA",
         exactMatch: false,
         name: "STI CBS SAE",
-        placeholder: "Código Empresa",
+        placeholder: "Nombre Empresa",
         maxResults: 6,
         maxSuggestions: 6,
         suggestionsEnabled: true,
@@ -749,11 +841,11 @@ export class EsriMapComponent implements OnInit {
           url: urlConstants.STI_CRM_MEDICIONES,
           outFields: ["*"]
         }),
-        searchFields: ["COD_EMPRESA"],
-        displayField: "COD_EMPRESA",
+        searchFields: ["NOMBRE_EMPRESA"],
+        displayField: "NOMBRE_EMPRESA",
         exactMatch: false,
         name: "STI CRM MEDICIONES",
-        placeholder: "Código Empresa",
+        placeholder: "Nombre Empresa",
         maxResults: 6,
         maxSuggestions: 6,
         suggestionsEnabled: true,
