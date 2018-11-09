@@ -76,13 +76,21 @@ export class EsriMapComponent implements OnInit {
       'esri/layers/GroupLayer'
     ]);
 
-    const templateFORedCritica = {
-      title: "Nodos Telesur",
+    const templateAnalisisFoDo = {
+      title: "Analisis Fo Do",
       content: [{
         type: "fields",
         fieldInfos: [{
           fieldName: "Name",
           label: "Nombre",
+          visible: true
+        },{
+          fieldName: "FolderPath",
+          label: "Ruta",
+          visible: true
+        },{
+          fieldName: "PopupInfo",
+          label: "Info",
           visible: true
         }]
       }]
@@ -332,18 +340,15 @@ export class EsriMapComponent implements OnInit {
       }]
     };
 
-    const nodosTelsur = new FeatureLayer({
-      url: urlConstants.NODOS_TELSUR,
-      title: 'Nodos Telesur'
+    const analisisFoDo1 = new FeatureLayer({
+      url: urlConstants.ANALISIS_DE_FO_1,
+      title: 'Analisis Fo Do',
+      popupTemplate: templateAnalisisFoDo
     });
-    const trazadoTelsurProject = new FeatureLayer({
-      url: urlConstants.TRAZADO_TELSUR_PROJECT,
-      title: 'Trazado Telesur Project',
-      popupTemplate: templateFORedCritica
-    });
-    const trazadoTelsur  = new FeatureLayer({
-      url: urlConstants.TRAZADO_TELSUR,
-      title: 'Trazado Telesur'
+    const analisisFoDo2 = new FeatureLayer({
+      url: urlConstants.ANALISIS_DE_FO_2,
+      title: 'Analisis Fo Do',
+      popupTemplate: templateAnalisisFoDo
     });
     const borradorIC1MacrozonacentronorteWom  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_WOM,
@@ -470,7 +475,7 @@ export class EsriMapComponent implements OnInit {
           borradorIC1MacrozonanorteVtrBandaAncha, borradorIC1MacrozonanorteWill, borradorIC1MacrozonanorteWom, borradorIC1MacrozonacentronorteClaroChile,
           borradorIC1MacrozonacentronorteClaroComunicaciones, borradorIC1MacrozonacentronorteEntelPCS, borradorIC1MacrozonacentronorteEntelPhone,
           borradorIC1MacrozonacentronorteMovistar, borradorIC1MacrozonacentronorteTelefonicaChile, borradorIC1MacrozonacentronorteVtRBandaAncha,
-          borradorIC1MacrozonacentronorteWill, borradorIC1MacrozonacentronorteWom, trazadoTelsur, trazadoTelsurProject, nodosTelsur]
+          borradorIC1MacrozonacentronorteWill, borradorIC1MacrozonacentronorteWom, analisisFoDo2, analisisFoDo1]
     });
 
     this.mapView.map.add(groupLayer);
@@ -488,27 +493,13 @@ export class EsriMapComponent implements OnInit {
       view: this.mapView,
         sources: [{
         featureLayer: new FeatureLayer({
-          url: urlConstants.NODOS_TELSUR,
-          outFields: ["*"]
-        }),
-        searchFields: ["NAME"],
-        displayField: "NAME ",
-        exactMatch: false,
-        name: "Nodos Telsur",
-        placeholder: "Nombre",
-        maxResults: 6,
-        maxSuggestions: 6,
-        suggestionsEnabled: true,
-        minSuggestCharacters: 0
-      },{
-        featureLayer: new FeatureLayer({
-          url: urlConstants.TRAZADO_TELSUR_PROJECT,
+          url: urlConstants.ANALISIS_DE_FO_1,
           outFields: ["*"]
         }),
         searchFields: ["Name"],
         displayField: "Name",
         exactMatch: false,
-        name: "Trazado Telsur Project",
+        name: "Analisis De Fo 1",
         placeholder: "Nombre",
         maxResults: 6,
         maxSuggestions: 6,
@@ -516,13 +507,13 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.TRAZADO_TELSUR,
+          url: urlConstants.ANALISIS_DE_FO_2,
           outFields: ["*"]
         }),
-        searchFields: ["NAME"],
-        displayField: "NAME",
+        searchFields: ["Name"],
+        displayField: "Name",
         exactMatch: false,
-        name: "Trazado Telsur",
+        name: "Analisis De Fo 2",
         placeholder: "Nombre",
         maxResults: 6,
         maxSuggestions: 6,
