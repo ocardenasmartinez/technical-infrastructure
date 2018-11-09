@@ -1,7 +1,6 @@
 module.exports = {
-  NODOS_TELSUR: 'http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/FO_Red_Critica/MapServer/0',
-  TRAZADO_TELSUR_PROJECT: 'http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/FO_Red_Critica/MapServer/1',
-  TRAZADO_TELSUR: 'http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/FO_Red_Critica/MapServer/2',
+  ANALISIS_DE_FO_1: 'http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/ANALISIS_FO_DO/MapServer/1',
+  ANALISIS_DE_FO_2: 'http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/ANALISIS_FO_DO/MapServer/1',
   BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_WOM: 'http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/0',
   BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_WILL: 'http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/1',
   BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_VTR_BANDA_ANCHA: 'http://copahue.subtel.gob.cl:6080/arcgis/rest/services/INFRAESTRUCTURA_CRITICA/INFRAESTRUCTURA_CRITICA/MapServer/2',
