@@ -77,7 +77,7 @@ export class EsriMapComponent implements OnInit {
     ]);
 
     const templateAnalisisFoDo = {
-      title: "Analisis Fo Do",
+      title: "Infraestructura Crítica",
       content: [{
         type: "fields",
         fieldInfos: [{
@@ -201,7 +201,7 @@ export class EsriMapComponent implements OnInit {
     };
 
     const templateCalidadRedMovilDdt0 = {
-      title: "Calidad Red Movil DDT",
+      title: "Infraestructura Crítica",
       content: [{
         type: "fields",
         fieldInfos: [{
@@ -249,7 +249,7 @@ export class EsriMapComponent implements OnInit {
     };
 
     const templateCalidadRedMovilDdt1 = {
-      title: "Calidad Red Movil DDT",
+      title: "Infraestructura Crítica",
       content: [{
         type: "fields",
         fieldInfos: [{
@@ -285,7 +285,7 @@ export class EsriMapComponent implements OnInit {
     };
 
     const templateCalidadRedMovilDdt2 = {
-      title: "Calidad Red Movil DDT",
+      title: "Infraestructura Crítica",
       content: [{
         type: "fields",
         fieldInfos: [{
