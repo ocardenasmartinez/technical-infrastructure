@@ -61,7 +61,7 @@ export class EsriMapComponent implements OnInit {
       this.mapView.ui.add(expand, 'top-left');
       this.mapView.ui.add(layerList, 'top-left');
 
-      this.setSearcher();
+      //this.setSearcher();
       this.mapView.map.add(this.layerCriticalInf.getLayers());
 
     } catch (error) {
@@ -109,7 +109,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_WOM,
+          url: urlConstants.CENTRO_NORTE_WOM,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],
@@ -123,7 +123,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_WILL,
+          url: urlConstants.CENTRO_NORTE_WILL,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],
@@ -137,7 +137,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_VTR_BANDA_ANCHA,
+          url: urlConstants.CENTRO_NORTE_VTR_BANDA_ANCHA,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],
@@ -151,7 +151,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_TELEFONICA_CHILE,
+          url: urlConstants.CENTRO_NORTE_TELEFONICA_CHILE,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],
@@ -165,7 +165,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_MOVISTAR,
+          url: urlConstants.CENTRO_NORTE_MOVISTAR,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],
@@ -179,7 +179,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_ENTEL_PHONE,
+          url: urlConstants.CENTRO_NORTE_ENTEL_PHONE,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],
@@ -193,7 +193,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_ENTEL_PCS,
+          url: urlConstants.CENTRO_NORTE_ENTEL_PCS,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],
@@ -207,7 +207,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_CLARO_COMUNICACIONES,
+          url: urlConstants.CENTRO_NORTE_CLARO_COMUNICACIONES,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],
@@ -221,7 +221,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.BORRADOR_IC1MACRO_ZONA_CENTRO_NORTE_CLARO_CHILE,
+          url: urlConstants.CENTRO_NORTE_CLARO_CHILE,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],
@@ -235,7 +235,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_WOM,
+          url: urlConstants.NORTE_WOM,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],
@@ -249,7 +249,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_WILL,
+          url: urlConstants.ZONA_NORTE_WILL,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],
@@ -263,7 +263,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_VTR_BANDA_ANCHA,
+          url: urlConstants.NORTE_VTR_BANDA_ANCHA,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],
@@ -277,7 +277,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_TELEFONICA_CHILE,
+          url: urlConstants.NORTE_TELEFONICA_CHILE,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],
@@ -291,7 +291,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_MOVISTAR,
+          url: urlConstants.NORTE_MOVISTAR,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],
@@ -305,7 +305,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_ENTEL_PHONE,
+          url: urlConstants.NORTE_ENTEL_PHONE,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],
@@ -319,7 +319,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_ENTEL_PCS,
+          url: urlConstants.NORTE_ENTEL_PCS,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],
@@ -333,7 +333,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_CLARO_COMUNICACIONES,
+          url: urlConstants.NORTE_CLARO_COMUNICACIONES,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],
@@ -347,7 +347,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_CLARO_CHILE,
+          url: urlConstants.NORTE_CLARO_CHILE,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],

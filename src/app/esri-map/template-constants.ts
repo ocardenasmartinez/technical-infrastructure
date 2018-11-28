@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class TemplateConstants {
     readonly templateAnalisisFoDo = {
-      title: "Infraestructura Crítica",
+      title: "Análisis FO Puntos",
       content: [{
         type: "fields",
         fieldInfos: [{
@@ -22,7 +22,7 @@ export class TemplateConstants {
       }]
     };
     readonly templateInfraestructuraCritica = {
-        title: "Infraestructura Crítica",
+        title: "Análisis FO Lineas",
         content: [{
           type: "fields",
           fieldInfos: [{
@@ -125,7 +125,7 @@ export class TemplateConstants {
       }]
     };
     readonly templateCalidadRedMovilDdt0 = {
-      title: "Infraestructura Crítica",
+      title: "Calidad Red Móvil DDT",
       content: [{
         type: "fields",
         fieldInfos: [{
@@ -172,7 +172,7 @@ export class TemplateConstants {
       }]
     }
     readonly templateCalidadRedMovilDdt1 = {
-      title: "Infraestructura Crítica",
+      title: "Calidad Red Móvil DDT",
       content: [{
         type: "fields",
         fieldInfos: [{
@@ -207,7 +207,7 @@ export class TemplateConstants {
       }]
     }
     readonly templateCalidadRedMovilDdt2 = {
-      title: "Infraestructura Crítica",
+      title: "Calidad Red Móvil DDT",
       content: [{
         type: "fields",
         fieldInfos: [{
