@@ -61,7 +61,7 @@ export class EsriMapComponent implements OnInit {
       this.mapView.ui.add(expand, 'top-left');
       this.mapView.ui.add(layerList, 'top-left');
 
-      //this.setSearcher();
+      this.setSearcher();
       this.mapView.map.add(this.layerCriticalInf.getLayers());
 
     } catch (error) {
