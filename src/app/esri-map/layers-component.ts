@@ -13,102 +13,102 @@ export class LayerCriticalInf {
     ]);
     const analisisFoDo1 = new FeatureLayer({
       url: urlConstants.ANALISIS_DE_FO_1,
-      title: 'Analisis Fo Do 1',
+      title: 'Analisis Fo Lineas',
       popupTemplate: this.templateConstants.templateAnalisisFoDo
     });
     const analisisFoDo2 = new FeatureLayer({
       url: urlConstants.ANALISIS_DE_FO_2,
-      title: 'Analisis Fo Do 2',
+      title: 'Analisis Fo Puntos',
       popupTemplate: this.templateConstants.templateAnalisisFoDo
     });
-    const borradorIC1MacrozonacentronorteWom  = new FeatureLayer({
+    const centronorteWom  = new FeatureLayer({
       url: urlConstants.CENTRO_NORTE_WOM,
       title: 'Macro Zona Centro Norte Wom',
       popupTemplate: this.templateConstants.templateInfraestructuraCritica
     });
-    const borradorIC1MacrozonacentronorteWill  = new FeatureLayer({
+    const centronorteWill  = new FeatureLayer({
       url: urlConstants.CENTRO_NORTE_WILL,
       title: 'Macro Zona Centro Norte Will',
       popupTemplate: this.templateConstants.templateInfraestructuraCritica
     });
-    const borradorIC1MacrozonacentronorteVtRBandaAncha  = new FeatureLayer({
+    const centronorteVtRBandaAncha  = new FeatureLayer({
       url: urlConstants.CENTRO_NORTE_VTR_BANDA_ANCHA,
       title: 'Macro Zona Centro Norte VTR Banda Ancha',
       popupTemplate: this.templateConstants.templateInfraestructuraCritica
     });
-    const borradorIC1MacrozonacentronorteTelefonicaChile  = new FeatureLayer({
+    const centronorteTelefonicaChile  = new FeatureLayer({
       url: urlConstants.CENTRO_NORTE_TELEFONICA_CHILE,
       title: 'Macro Zona Centro Norte Teléfonica Chile',
       popupTemplate: this.templateConstants.templateInfraestructuraCritica
     });
-    const borradorIC1MacrozonacentronorteMovistar  = new FeatureLayer({
+    const centronorteMovistar  = new FeatureLayer({
       url: urlConstants.CENTRO_NORTE_MOVISTAR,
       title: 'Macro Zona Centro Norte Movistar',
       popupTemplate: this.templateConstants.templateInfraestructuraCritica
     });
-    const borradorIC1MacrozonacentronorteEntelPhone  = new FeatureLayer({
+    const centronorteEntelPhone  = new FeatureLayer({
       url: urlConstants.CENTRO_NORTE_ENTEL_PHONE,
       title: 'Macro Zona Centro Norte Entel Phone',
       popupTemplate: this.templateConstants.templateInfraestructuraCritica
     });
-    const borradorIC1MacrozonacentronorteEntelPCS  = new FeatureLayer({
+    const centronorteEntelPCS  = new FeatureLayer({
       url: urlConstants.CENTRO_NORTE_ENTEL_PCS,
       title: 'Macro Zona Centro Norte Entel PCS',
       popupTemplate: this.templateConstants.templateInfraestructuraCritica
     });
-    const borradorIC1MacrozonacentronorteClaroComunicaciones  = new FeatureLayer({
+    const centronorteClaroComunicaciones  = new FeatureLayer({
       url: urlConstants.CENTRO_NORTE_CLARO_COMUNICACIONES,
       title: 'Macro Zona Centro Norte Claro Comunicaciones',
       popupTemplate: this.templateConstants.templateInfraestructuraCritica
     });
-    const borradorIC1MacrozonacentronorteClaroChile  = new FeatureLayer({
+    const centronorteClaroChile  = new FeatureLayer({
       url: urlConstants.CENTRO_NORTE_CLARO_CHILE,
-      title: 'Macro Zona Centro Norte Chile',
+      title: 'Zona Centro Norte Chile',
       popupTemplate: this.templateConstants.templateInfraestructuraCritica
     });
-    const borradorIC1MacrozonanorteWom  = new FeatureLayer({
+    const zonanorteWom  = new FeatureLayer({
       url: urlConstants.NORTE_WOM,
-      title: 'Macro Zona Centro Norte Claro Chile',
+      title: 'Zona Centro Norte Claro Chile',
       popupTemplate: this.templateConstants.templateInfraestructuraCritica
     });
-    const borradorIC1MacrozonanorteWill  = new FeatureLayer({
+    const zonanorteWill  = new FeatureLayer({
       url: urlConstants.ZONA_NORTE_WILL,
-      title: 'Macro Zona Norte Will',
+      title: 'Zona Norte Entel Will',
       popupTemplate: this.templateConstants.templateInfraestructuraCritica
     });
-    const borradorIC1MacrozonanorteVtrBandaAncha  = new FeatureLayer({
+    const zonanorteVtrBandaAncha  = new FeatureLayer({
       url: urlConstants.NORTE_VTR_BANDA_ANCHA,
-      title: 'Macro Zona Norte VTR Banda Ancha',
+      title: 'Zona Norte VTR Banda Ancha',
       popupTemplate: this.templateConstants.templateInfraestructuraCritica
     });
-    const borradorIC1MacrozonanorteTelefonicaChile  = new FeatureLayer({
+    const norteTelefonicaChile  = new FeatureLayer({
       url: urlConstants.NORTE_TELEFONICA_CHILE,
-      title: 'Macro Zona Norte Teléfonica',
+      title: 'Zona Norte Teléfonica',
       popupTemplate: this.templateConstants.templateInfraestructuraCritica
     });
-    const borradorIC1MacrozonanorteMovistar  = new FeatureLayer({
+    const norteMovistar  = new FeatureLayer({
       url: urlConstants.NORTE_MOVISTAR,
-      title: 'Macro Zona Norte Movistar',
+      title: 'Zona Norte Movistar',
       popupTemplate: this.templateConstants.templateInfraestructuraCritica
     });
-    const borradorIC1MacrozonanorteEntelPhone  = new FeatureLayer({
+    const norteEntelPhone  = new FeatureLayer({
       url: urlConstants.NORTE_ENTEL_PHONE,
-      title: 'Macro Zona Norte Entel Phone',
+      title: 'Zona Norte Entel Phone',
       popupTemplate: this.templateConstants.templateInfraestructuraCritica
     });
-    const borradorIC1MacrozonanorteEntelPCS  = new FeatureLayer({
+    const norteEntelPCS  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_ENTEL_PCS,
-      title: 'Macro Zona Norte Entel PCS',
+      title: 'Zona Norte Entel PCS',
       popupTemplate: this.templateConstants.templateInfraestructuraCritica
     });
-    const borradorIC1MacrozonanorteClaroComunicaciones  = new FeatureLayer({
+    const norteClaroComunicaciones  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_CLARO_COMUNICACIONES,
-      title: 'Macro Zona Norte Claro Comunicaciones',
+      title: 'Zona Norte Claro Comunicaciones',
       popupTemplate: this.templateConstants.templateInfraestructuraCritica
     });
-    const borradorIC1MacrozonanorteClaroChile  = new FeatureLayer({
+    const norteClaroChile  = new FeatureLayer({
       url: urlConstants.BORRADOR_IC1MACRO_ZONA_NORTE_CLARO_CHILE,
-      title: 'Macro Zona Norte Claro Chile',
+      title: 'Zona Norte Claro Chile',
       popupTemplate: this.templateConstants.templateInfraestructuraCritica
     });
     const IC1_IC2_2016_2020  = new FeatureLayer({
@@ -140,12 +140,15 @@ export class LayerCriticalInf {
         title: "Infraestructura Crítica",
         visible: true,
         visibilityMode: "independent",
-        layers: [STI_CRM_ESTACIONES, STI_CBS_SAE, STI_CRM_MEDICIONES, IC1_PLANFISCA_N5MAYO, IC1_IC2_2016_2020, borradorIC1MacrozonanorteClaroChile, borradorIC1MacrozonanorteClaroComunicaciones,
-          borradorIC1MacrozonanorteEntelPCS, borradorIC1MacrozonanorteEntelPhone, borradorIC1MacrozonanorteMovistar, borradorIC1MacrozonanorteTelefonicaChile,
-          borradorIC1MacrozonanorteVtrBandaAncha, borradorIC1MacrozonanorteWill, borradorIC1MacrozonanorteWom, borradorIC1MacrozonacentronorteClaroChile,
-          borradorIC1MacrozonacentronorteClaroComunicaciones, borradorIC1MacrozonacentronorteEntelPCS, borradorIC1MacrozonacentronorteEntelPhone,
-          borradorIC1MacrozonacentronorteMovistar, borradorIC1MacrozonacentronorteTelefonicaChile, borradorIC1MacrozonacentronorteVtRBandaAncha,
-          borradorIC1MacrozonacentronorteWill, borradorIC1MacrozonacentronorteWom, analisisFoDo2, analisisFoDo1]
+        layers: [
+          STI_CRM_ESTACIONES, STI_CBS_SAE, STI_CRM_MEDICIONES, IC1_PLANFISCA_N5MAYO,
+          IC1_IC2_2016_2020, norteClaroChile, norteClaroComunicaciones,
+          norteEntelPCS, norteEntelPhone, norteMovistar, norteTelefonicaChile,
+          zonanorteVtrBandaAncha, zonanorteWill, zonanorteWom, centronorteClaroChile,
+          centronorteClaroComunicaciones, centronorteEntelPCS, centronorteEntelPhone,
+          centronorteMovistar, centronorteTelefonicaChile, centronorteVtRBandaAncha,
+          centronorteWill, centronorteWom, analisisFoDo2, analisisFoDo1
+        ]
     });
     return groupLayer;
   }
