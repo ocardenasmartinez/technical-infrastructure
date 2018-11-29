@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class TemplateConstants {
-    readonly templateAnalisisFoDo = {
-      title: "Análisis FO Puntos",
+    readonly analisisFo = {
+      title: "Análisis FO",
       content: [{
         type: "fields",
         fieldInfos: [{
@@ -21,8 +21,8 @@ export class TemplateConstants {
         }]
       }]
     };
-    readonly templateInfraestructuraCritica = {
-        title: "Análisis FO Lineas",
+    readonly infraestructuraCritica1 = {
+        title: "Infraestructura Crítica",
         content: [{
           type: "fields",
           fieldInfos: [{
@@ -120,6 +120,307 @@ export class TemplateConstants {
           },{
             fieldName: "LATITUD",
             label: "Latitud",
+            visible: true
+          }]
+      }]
+    };
+    readonly infraestructuraCritica2 = {
+        title: "Infraestructura Crítica",
+        content: [{
+          type: "fields",
+          fieldInfos: [{
+            fieldName: "SERVICIO",
+            label: "Servicio",
+            visible: true
+          },{
+            fieldName: "OPERADOR",
+            label: "Operador",
+            visible: true
+          },{
+            fieldName: "NOMBRE_INSTALACIÓN",
+            label: "Nombre Instalación",
+            visible: true
+          },{
+            fieldName: "CALLE",
+            label: "Calle",
+            visible: true
+          },{
+            fieldName: "N°",
+            label: "N°",
+            visible: true
+          },{
+            fieldName: "ADICIONALES",
+            label: "Adicionales",
+            visible: true
+          },{
+            fieldName: "REGIÓN",
+            label: "Región",
+            visible: true
+          },{
+            fieldName: "COMUNA",
+            label: "Comuna",
+            visible: true
+          },{
+            fieldName: "CIUDAD",
+            label: "Ciudad",
+            visible: true
+          },{
+            fieldName: "Nemonico_Empresa",
+            label: "Nemonico Empresa",
+            visible: true
+          },{
+            fieldName: "Nemonico_Subtel",
+            label: "Nemonico Subtel",
+            visible: true
+          },{
+            fieldName: "TIPO",
+            label: "Tipo",
+            visible: true
+          },{
+            fieldName: "SUMINISTRADOR",
+            label: "Suministrador",
+            visible: true
+          },{
+            fieldName: "UNIDAD",
+            label: "Unidad",
+            visible: true
+          },{
+            fieldName: "NORMAL",
+            label: "Normal",
+            visible: true
+          },{
+            fieldName: "TIPO_DE_RESPALDO",
+            label: "Tipo De Respaldo",
+            visible: true
+          },{
+            fieldName: "COMBUSTIBLE_DEL_RESPALDO",
+            label: "Comubustubles De Respaldo",
+            visible: true
+          },{
+            fieldName: "CAPACIDAD",
+            label: "Capacidad",
+            visible: true
+          },{
+            fieldName: "UNIDAD1",
+            label: "Unidad",
+            visible: true
+          },{
+            fieldName: "AUTONOMÍA_EN_HORAS",
+            label: "Autonomía En Horas",
+            visible: true
+          },{
+            fieldName: "Latitud",
+            label: "Latitud",
+            visible: true
+          },{
+            fieldName: "Longitud",
+            label: "Longitud",
+            visible: true
+          },{
+            fieldName: "DATUM",
+            label: "Datum",
+            visible: true
+          }]
+      }]
+    };
+    readonly infraestructuraCritica3 = {
+        title: "Infraestructura Crítica",
+        content: [{
+          type: "fields",
+          fieldInfos: [{
+            fieldName: "N°_Correl",
+            label: "N° Correl",
+            visible: true
+          },{
+          	fieldName: "N°_Sitio_",
+            label: "N° Sitio",
+            visible: true
+          },{
+          	fieldName: "Empresa",
+            label: "Empresa",
+            visible: true
+          },{
+          	fieldName: "IC_Nivel",
+            label: "IC Nivel",
+            visible: true
+          },{
+          	fieldName: "Código_de",
+            label: "Código",
+            visible: true
+          },{
+          	fieldName: "Servicios_",
+            label: "Servicios",
+            visible: true
+          },{
+          	fieldName: "Tipo_de_Se",
+            label: "Tipo De Se",
+            visible: true
+          },{
+          	fieldName: "Tipo_de_Eq",
+            label: "Tipo De Eq",
+            visible: true
+          },{
+          	fieldName: "Región",
+            label: "Región",
+            visible: true
+          },{
+          	fieldName: "Comuna",
+            label: "Comuna",
+            visible: true
+          },{
+          	fieldName: "Dirección",
+            label: "Dirección",
+            visible: true
+          },{
+          	fieldName: "Latitud_Su",
+            label: "Latitud_Su",
+            visible: true
+          },{
+          	fieldName: "Tecnologí",
+            label: "Tecnología",
+            visible: true
+          },{
+          	fieldName: "Latitud",
+            label: "Latitud",
+            visible: true
+          },{
+          	fieldName: "Longitud",
+            label: "Longitud",
+            visible: true
+      	}]
+      }]
+    };
+    readonly infraestructuraCritica4 = {
+        title: "Infraestructura Crítica",
+        content: [{
+          type: "fields",
+          fieldInfos: [{
+            fieldName: "N°_Correl",
+            label: "N° Correl",
+            visible: true
+          },{
+          	fieldName: "N°_Sitio_",
+            label: "N° Sitio",
+            visible: true
+          },{
+          	fieldName: "Empresa",
+            label: "Empresa",
+            visible: true
+          },{
+          	fieldName: "IC_Nivel",
+            label: "IC_Nivel",
+            visible: true
+          },{
+          	fieldName: "Código_de",
+            label: "Código",
+            visible: true
+          },{
+          	fieldName: "Servicios_",
+            label: "Servicios",
+            visible: true
+          },{
+          	fieldName: "Tipo_de_Se",
+            label: "Tipo De Se",
+            visible: true
+          },{
+          	fieldName: "Tipo_de_Eq",
+            label: "Tipo De Eq",
+            visible: true
+          },{
+          	fieldName: "Código_Em",
+            label: "Código Em",
+            visible: true
+          },{
+          	fieldName: "Región",
+            label: "Región",
+            visible: true
+          },{
+          	fieldName: "Comuna",
+            label: "Comuna",
+            visible: true
+          },{
+          	fieldName: "Dirección",
+            label: "Dirección",
+            visible: true
+          },{
+          	fieldName: "Decreto_Co",
+            label: "Decreto",
+            visible: true
+          },{
+          	fieldName: "Tecnologí",
+            label: "Tecnología",
+            visible: true
+          },{
+          	fieldName: "Macrozona",
+            label: "Macrozona",
+            visible: true
+          },{
+          	fieldName: "Empresa1",
+            label: "Empresa1",
+            visible: true
+          },{
+          	fieldName: "Resolució",
+            label: "Resolució",
+            visible: true
+          },{
+          	fieldName: "Fecha",
+            label: "Fecha",
+            visible: true
+          },{
+          	fieldName: "Informe",
+            label: "Informe",
+            visible: true
+          },{
+          	fieldName: "Fecha1",
+            label: "Fecha1",
+            visible: true
+          },{
+          	fieldName: "Cumple__si",
+            label: "Cumple",
+            visible: true
+          },{
+          	fieldName: "Memo_a_DJ",
+            label: "Memo a DJ",
+            visible: true
+          },{
+          	fieldName: "Fecha2",
+            label: "Fecha2",
+            visible: true
+          },{
+          	fieldName: "Con_observ",
+            label: "Con observ",
+            visible: true
+          },{
+          	fieldName: "Oficio_Ins",
+            label: "Oficio Ins",
+            visible: true
+          },{
+          	fieldName: "Fecha3",
+            label: "Fecha3",
+            visible: true
+          },{
+          	fieldName: "Respuesta_",
+            label: "Respuesta",
+            visible: true
+          },{
+          	fieldName: "Fecha4",
+            label: "Fecha4",
+            visible: true
+          },{
+          	fieldName: "Oficio_Sub",
+            label: "Oficio Sub",
+            visible: true
+          },{
+          	fieldName: "Fecha5",
+            label: "Fecha5",
+            visible: true
+          },{
+          	fieldName: "Latitud",
+            label: "Latitud",
+            visible: true
+          },{
+          	fieldName: "Longitud",
+            label: "Longitud",
             visible: true
           }]
       }]

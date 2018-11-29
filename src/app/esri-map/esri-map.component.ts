@@ -249,7 +249,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.ZONA_NORTE_WILL,
+          url: urlConstants.NORTE_WILL,
           outFields: ["*"]
         }),
         searchFields: ["NOMBRE_INSTALACIÓN"],
