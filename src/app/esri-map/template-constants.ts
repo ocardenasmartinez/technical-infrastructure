@@ -22,7 +22,7 @@ export class TemplateConstants {
       }]
     };
     readonly infraestructuraCritica1 = {
-        title: "Infraestructura Crítica",
+        title: "Zona Centro Norte",
         content: [{
           type: "fields",
           fieldInfos: [{
@@ -125,7 +125,7 @@ export class TemplateConstants {
       }]
     };
     readonly infraestructuraCritica2 = {
-        title: "Infraestructura Crítica",
+        title: "Zona Norte",
         content: [{
           type: "fields",
           fieldInfos: [{
@@ -224,7 +224,7 @@ export class TemplateConstants {
       }]
     };
     readonly infraestructuraCritica3 = {
-        title: "Infraestructura Crítica",
+        title: "IC1 IC2 2016",
         content: [{
           type: "fields",
           fieldInfos: [{
@@ -291,7 +291,7 @@ export class TemplateConstants {
       }]
     };
     readonly infraestructuraCritica4 = {
-        title: "Infraestructura Crítica",
+        title: "IC1 PLAN FISCA",
         content: [{
           type: "fields",
           fieldInfos: [{
@@ -425,8 +425,8 @@ export class TemplateConstants {
           }]
       }]
     };
-    readonly templateCalidadRedMovilDdt0 = {
-      title: "Calidad Red Móvil DDT",
+    readonly calidadRedMovilDdt1 = {
+      title: "STI CRM",
       content: [{
         type: "fields",
         fieldInfos: [{
@@ -472,8 +472,8 @@ export class TemplateConstants {
         }]
       }]
     }
-    readonly templateCalidadRedMovilDdt1 = {
-      title: "Calidad Red Móvil DDT",
+    readonly calidadRedMovilDdt2 = {
+      title: "STI CBS",
       content: [{
         type: "fields",
         fieldInfos: [{
@@ -507,8 +507,8 @@ export class TemplateConstants {
         }]
       }]
     }
-    readonly templateCalidadRedMovilDdt2 = {
-      title: "Calidad Red Móvil DDT",
+    readonly calidadRedMovilDdt3 = {
+      title: "STI CRM",
       content: [{
         type: "fields",
         fieldInfos: [{

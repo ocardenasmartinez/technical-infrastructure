@@ -11,7 +11,7 @@ export class LayerCriticalInf {
       'esri/layers/FeatureLayer',
       'esri/layers/GroupLayer'
     ]);
-    /*const analisisFoDoPuntos = new FeatureLayer({
+    const analisisFoDoPuntos = new FeatureLayer({
       url: urlConstants.ANALISIS_DE_FO_1,
       title: 'Analisis Fo Puntos',
       popupTemplate: this.templateConstants.analisisFo
@@ -68,7 +68,7 @@ export class LayerCriticalInf {
     });
     const zonanorteWom  = new FeatureLayer({
       url: urlConstants.NORTE_WOM,
-      title: 'Zona Centro Norte Claro Chile',
+      title: 'Zona Norte Claro Chile',
       popupTemplate: this.templateConstants.infraestructuraCritica2
     });
     const zonanorteWill  = new FeatureLayer({
@@ -120,29 +120,23 @@ export class LayerCriticalInf {
       url: urlConstants.IC1_PLANFISCA_N5MAYO,
       title: 'IC1 PLAN FISCA N5 MAYO',
       popupTemplate: this.templateConstants.infraestructuraCritica4
-    });*/
+    });
     const STI_CRM_ESTACIONES  = new FeatureLayer({
       url: urlConstants.STI_CRM_ESTACIONES,
       title: 'STI CRM ESTACIONES',
-      popupTemplate: this.templateConstants.templateCalidadRedMovilDdt0
+      popupTemplate: this.templateConstants.calidadRedMovilDdt1
     });
     const STI_CBS_SAE  = new FeatureLayer({
       url: urlConstants.STI_CBS_SAE,
       title: 'STI CBS SAE',
-      popupTemplate: this.templateConstants.templateCalidadRedMovilDdt1
+      popupTemplate: this.templateConstants.calidadRedMovilDdt2
     });
     const STI_CRM_MEDICIONES  = new FeatureLayer({
       url: urlConstants.STI_CRM_MEDICIONES,
       title: 'STI CRM MEDICIONES',
-      popupTemplate: this.templateConstants.templateCalidadRedMovilDdt2
+      popupTemplate: this.templateConstants.calidadRedMovilDdt3
     });
     return new GroupLayer({
-        title: "Infraestructura Crítica",
-        visible: true,
-        visibilityMode: "independent",
-        layers: [STI_CBS_SAE]
-    });
-    /*const groupLayer = new GroupLayer({
         title: "Infraestructura Crítica",
         visible: true,
         visibilityMode: "independent",
@@ -153,9 +147,9 @@ export class LayerCriticalInf {
           zonanorteVtrBandaAncha, zonanorteWill, zonanorteWom, centronorteClaroChile,
           centronorteClaroComunicaciones, centronorteEntelPCS, centronorteEntelPhone,
           centronorteMovistar, centronorteTelefonicaChile, centronorteVtRBandaAncha,
-          centronorteWill, centronorteWom, analisisFoDo2, analisisFoDoPuntosLineas
+          centronorteWill, centronorteWom, analisisFoDoLineas, analisisFoDoPuntos
         ]
-    });*/
+    });
   }
 
 }
