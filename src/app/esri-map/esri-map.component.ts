@@ -63,4 +63,5 @@ export class EsriMapComponent implements OnInit {
       console.log('error: ' + error);
     }
   }
+
 }
