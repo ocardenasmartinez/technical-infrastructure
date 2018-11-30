@@ -37,7 +37,7 @@ export class EsriMapComponent implements OnInit {
         'esri/layers/GroupLayer',
         'esri/widgets/Search'
       ]);
-      const mapProperties: esri.MapProperties = {basemap: this._basemap};
+      const mapProperties: esri.MapProperties = { basemap: this._basemap };
       const map: esri.Map = new EsriMap(mapProperties);
       const mapViewProperties: esri.MapViewProperties = {
         container: this.mapViewEl.nativeElement,
@@ -50,8 +50,8 @@ export class EsriMapComponent implements OnInit {
         view: this.mapView,
         container: document.createElement('div')
       });
-      const expand = new Expand({view: this.mapView, content: basemapGallery});
-      const layerList = new LayerList({view: this.mapView});
+      const expand = new Expand({ view: this.mapView, content: basemapGallery });
+      const layerList = new LayerList({ view: this.mapView });
       this.mapView.when(() => {this.mapLoaded.emit(true);});
       const searchWidget = this.searcher.getSearcher(this.mapView, FeatureLayer, Search);
       this.mapView.ui.add(expand, 'top-left');
