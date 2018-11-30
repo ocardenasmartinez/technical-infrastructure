@@ -24,7 +24,7 @@ export class EsriMapComponent implements OnInit {
   private groupLayer: esri.GroupLayer;
 
   constructor(@Inject(CriticalInfrastructure) private critical, @Inject(Searcher) private searcher) {}
-  async ngOnInit() {this.initializeMap();}
+  async ngOnInit() { this.initializeMap(); }
   async initializeMap() {
     try {
       const [EsriMap, EsriMapView, BasemapGallery, Expand, LayerList, FeatureLayer, GroupLayer, Search] = await loadModules([
@@ -52,7 +52,7 @@ export class EsriMapComponent implements OnInit {
       });
       const expand = new Expand({ view: this.mapView, content: basemapGallery });
       const layerList = new LayerList({ view: this.mapView });
-      this.mapView.when(() => {this.mapLoaded.emit(true);});
+      this.mapView.when(() => { this.mapLoaded.emit(true);} );
       const searchWidget = this.searcher.getSearcher(this.mapView, FeatureLayer, Search);
       this.mapView.ui.add(expand, 'top-left');
       this.mapView.ui.add(layerList, 'top-left');

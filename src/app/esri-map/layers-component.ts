@@ -148,4 +148,7 @@ export class CriticalInfrastructure {
         ]
     });
   }
+  public findLayerById(id: number) {
+    console.log('yeah!');
+  }
 }
