@@ -308,7 +308,7 @@ export class TemplateConstants {
             visible: true
           },{
           	fieldName: "IC_Nivel",
-            label: "IC_Nivel",
+            label: "IC Nivel",
             visible: true
           },{
           	fieldName: "Código_de",
@@ -372,7 +372,23 @@ export class TemplateConstants {
             visible: true
           },{
           	fieldName: "Fecha1",
-            label: "Fecha1",
+            label: "Primera Fecha",
+            visible: true
+          },{
+          	fieldName: "Fecha2",
+            label: "Segunda Fecha",
+            visible: true
+          },{
+          	fieldName: "Fecha3",
+            label: "Tercera Fecha",
+            visible: true
+          },{
+          	fieldName: "Fecha4",
+            label: "Cuarta Fecha",
+            visible: true
+          },{
+          	fieldName: "Fecha5",
+            label: "Quinta Fecha",
             visible: true
           },{
           	fieldName: "Cumple__si",
@@ -383,10 +399,6 @@ export class TemplateConstants {
             label: "Memo a DJ",
             visible: true
           },{
-          	fieldName: "Fecha2",
-            label: "Fecha2",
-            visible: true
-          },{
           	fieldName: "Con_observ",
             label: "Con observ",
             visible: true
@@ -395,24 +407,12 @@ export class TemplateConstants {
             label: "Oficio Ins",
             visible: true
           },{
-          	fieldName: "Fecha3",
-            label: "Fecha3",
-            visible: true
-          },{
           	fieldName: "Respuesta_",
             label: "Respuesta",
             visible: true
           },{
-          	fieldName: "Fecha4",
-            label: "Fecha4",
-            visible: true
-          },{
           	fieldName: "Oficio_Sub",
             label: "Oficio Sub",
-            visible: true
-          },{
-          	fieldName: "Fecha5",
-            label: "Fecha5",
             visible: true
           },{
           	fieldName: "Latitud",
