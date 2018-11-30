@@ -5,7 +5,7 @@ import esri = __esri;
 
 @Injectable()
 export class Searcher {
-  getSearcher(mapView, FeatureLayer, Search): esri.Search {
+  public getSearcher(mapView, FeatureLayer, Search): esri.Search {
     return new Search({
       view: mapView,
         sources: [{

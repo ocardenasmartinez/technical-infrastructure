@@ -37,61 +37,31 @@ export class EsriMapComponent implements OnInit {
         'esri/layers/GroupLayer',
         'esri/widgets/Search'
       ]);
-
       const mapProperties: esri.MapProperties = {basemap: this._basemap};
-
       const map: esri.Map = new EsriMap(mapProperties);
-
       const mapViewProperties: esri.MapViewProperties = {
         container: this.mapViewEl.nativeElement,
         center: this._center,
         zoom: this._zoom,
         map: map
       };
-
       this.mapView = new EsriMapView(mapViewProperties);
-
       const basemapGallery = new BasemapGallery({
         view: this.mapView,
         container: document.createElement('div')
       });
       const expand = new Expand({view: this.mapView, content: basemapGallery});
-
-      const layerList = new LayerList({
-        view: this.mapView
-      });
-
+      const layerList = new LayerList({view: this.mapView});
       this.mapView.when(() => {this.mapLoaded.emit(true);});
-
       const searchWidget = this.searcher.getSearcher(this.mapView, FeatureLayer, Search);
-
       this.mapView.ui.add(expand, 'top-left');
       this.mapView.ui.add(layerList, 'top-left');
       this.mapView.map.add(this.critical.getLayers(FeatureLayer, GroupLayer));
       this.mapView.ui.add(searchWidget, 'top-right');
-
     } catch (error) {
       alert('se produjo un error');
       console.log('error: ' + error);
     }
   }
-
-  /*async setSearcher() {
-
-    const [Search, FeatureLayer] = await loadModules([
-      'esri/widgets/Search',
-      'esri/layers/FeatureLayer'
-    ]);
-
-    const searchWidget = new Search({
-
-    });
-
-    searchWidget.on("search-blur", function(event){
-      console.log(this.activeSourceIndex);
-    });
-
-    this.mapView.ui.add(searchWidget, 'top-right');
-  }*/
 
 }

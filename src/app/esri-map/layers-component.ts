@@ -7,7 +7,7 @@ import esri = __esri;
 @Injectable()
 export class CriticalInfrastructure {
   constructor(@Inject(TemplateConstants) private templateConstants) {}
-  getLayers(FeatureLayer, GroupLayer): esri.GroupLayer {
+  public getLayers(FeatureLayer, GroupLayer): esri.GroupLayer {
     const analisisFoDoPuntos = new FeatureLayer({
       url: urlConstants.ANALISIS_DE_FO_PUNTOS,
       title: 'Analisis Fo Puntos',
