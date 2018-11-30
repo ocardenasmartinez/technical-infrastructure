@@ -81,7 +81,7 @@ export class EsriMapComponent implements OnInit {
       view: this.mapView,
         sources: [{
         featureLayer: new FeatureLayer({
-          url: urlConstants.ANALISIS_DE_FO_1,
+          url: urlConstants.ANALISIS_DE_FO_PUNTOS,
           outFields: ["*"]
         }),
         searchFields: ["Name"],
@@ -95,7 +95,7 @@ export class EsriMapComponent implements OnInit {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.ANALISIS_DE_FO_2,
+          url: urlConstants.ANALISIS_DE_FO_LINEAS,
           outFields: ["*"]
         }),
         searchFields: ["Name"],

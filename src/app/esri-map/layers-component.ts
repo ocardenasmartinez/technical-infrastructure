@@ -12,12 +12,12 @@ export class LayerCriticalInf {
       'esri/layers/GroupLayer'
     ]);
     const analisisFoDoPuntos = new FeatureLayer({
-      url: urlConstants.ANALISIS_DE_FO_1,
+      url: urlConstants.ANALISIS_DE_FO_PUNTOS,
       title: 'Analisis Fo Puntos',
       popupTemplate: this.templateConstants.analisisFo
     });
     const analisisFoDoLineas = new FeatureLayer({
-      url: urlConstants.ANALISIS_DE_FO_2,
+      url: urlConstants.ANALISIS_DE_FO_LINEAS,
       title: 'Analisis Fo Lineas',
       popupTemplate: this.templateConstants.analisisFo
     });

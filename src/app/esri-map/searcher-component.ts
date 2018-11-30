@@ -15,7 +15,7 @@ export class Searcher {
       view: mapView,
         sources: [{
         featureLayer: new FeatureLayer({
-          url: urlConstants.ANALISIS_DE_FO_1,
+          url: urlConstants.ANALISIS_DE_FO_PUNTOS,
           outFields: ["*"]
         }),
         searchFields: ["Name"],
@@ -29,7 +29,7 @@ export class Searcher {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.ANALISIS_DE_FO_2,
+          url: urlConstants.ANALISIS_DE_FO_LINEAS,
           outFields: ["*"]
         }),
         searchFields: ["Name"],
