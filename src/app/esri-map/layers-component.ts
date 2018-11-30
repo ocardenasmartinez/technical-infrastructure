@@ -2,15 +2,12 @@ import { Injectable, Inject } from '@angular/core';
 import { loadModules } from 'esri-loader';
 import { TemplateConstants } from './template-constants';
 import urlConstants from './layers-url-constants';
+import esri = __esri;
 
 @Injectable()
-export class LayerCriticalInf {
+export class CriticalInfrastructure {
   constructor(@Inject(TemplateConstants) private templateConstants) {}
-  async getLayers() {
-    const [FeatureLayer, GroupLayer] = await loadModules([
-      'esri/layers/FeatureLayer',
-      'esri/layers/GroupLayer'
-    ]);
+  getLayers(FeatureLayer, GroupLayer): esri.GroupLayer {
     const analisisFoDoPuntos = new FeatureLayer({
       url: urlConstants.ANALISIS_DE_FO_PUNTOS,
       title: 'Analisis Fo Puntos',
@@ -139,7 +136,7 @@ export class LayerCriticalInf {
     return new GroupLayer({
         title: "Infraestructura Crítica",
         visible: true,
-        visibilityMode: "independent",
+        visibilityMode: "exclusive",
         layers: [
           STI_CRM_ESTACIONES, STI_CBS_SAE, STI_CRM_MEDICIONES, IC1_PLANFISCA_N5MAYO,
           IC1_IC2_2016_2020, norteClaroChile, norteClaroComunicaciones,
@@ -151,5 +148,4 @@ export class LayerCriticalInf {
         ]
     });
   }
-
 }
