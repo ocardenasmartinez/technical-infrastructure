@@ -62,6 +62,7 @@ export class EsriMapComponent implements OnInit {
       this.mapView.ui.add(this.searchWidget, 'top-right');
       this.mapView.map.add(this.groupLayer);
       this.layers = this.groupLayer.layers;
+      this.setSymbols();
     } catch (error) {
       alert('se produjo un error');
       console.log('error: ' + error);
@@ -76,7 +77,9 @@ export class EsriMapComponent implements OnInit {
   }
 
   private setSymbols():void {
-
+    this.layers._items.forEach(x => {
+      console.log(x.graphics);
+    });
   }
 
 }
