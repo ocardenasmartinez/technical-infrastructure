@@ -361,7 +361,7 @@ export class Searcher {
       }]
     });
     searcher.on('search-focus', function(event) {
-      parent.setLayer(this.activeSourceIndex);
+      parent.setGroupLayer(this.activeSourceIndex);
     });
     return searcher;
   }

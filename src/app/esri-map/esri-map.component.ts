@@ -23,6 +23,7 @@ export class EsriMapComponent implements OnInit {
   private mapView: esri.MapView;
   private groupLayer: esri.GroupLayer;
   private layer: esri.FeatureLayer;
+  private searchWidget: esri.Search;
 
   constructor(@Inject(CriticalInfrastructure) private critical, @Inject(Searcher) private searcher) {}
   async ngOnInit() { this.initializeMap(); }
@@ -54,24 +55,24 @@ export class EsriMapComponent implements OnInit {
       const expand = new Expand({ view: this.mapView, content: basemapGallery });
       const layerList = new LayerList({ view: this.mapView });
       this.mapView.when(() => { this.mapLoaded.emit(true);} );
-      const searchWidget = this.searcher.getSearcher(this.mapView, FeatureLayer, Search, this);
+      this.searchWidget = this.searcher.getSearcher(this.mapView, FeatureLayer, Search, this);
+      this.groupLayer = this.critical.getLayers(FeatureLayer, GroupLayer, this);
       this.mapView.ui.add(expand, 'top-left');
       this.mapView.ui.add(layerList, 'top-left');
-      this.groupLayer = this.critical.getLayers(FeatureLayer, GroupLayer);
+      this.mapView.ui.add(this.searchWidget, 'top-right');
       this.mapView.map.add(this.groupLayer);
-      this.mapView.ui.add(searchWidget, 'top-right');
     } catch (error) {
       alert('se produjo un error');
       console.log('error: ' + error);
     }
   }
 
-  setLayer(index: number) {
+  setGroupLayer(index: number) {
     const indexes = [];
     let value = 24;
     for(let i=1;i<=25;i++) indexes[i] = value--;
     this.layer = this.groupLayer.layers._items[indexes[index]];
-    this.layer.visible = true
+    this.layer.visible = true;
   }
 
 }
