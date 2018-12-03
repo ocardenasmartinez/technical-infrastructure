@@ -5,7 +5,7 @@ import esri = __esri;
 
 @Injectable()
 export class Searcher {
-  public getSearcher(mapView, FeatureLayer, Search): esri.Search {
+  public getSearcher(mapView, FeatureLayer, Search, parent): esri.Search {
     const searcher = new Search({
       view: mapView,
         sources: [{
@@ -361,7 +361,7 @@ export class Searcher {
       }]
     });
     searcher.on('search-focus', function(event) {
-      console.log('search-focus: ' + this.activeSourceIndex);
+      parent.setLayer(this.activeSourceIndex);
     });
     return searcher;
   }
