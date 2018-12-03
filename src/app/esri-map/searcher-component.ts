@@ -5,8 +5,9 @@ import esri = __esri;
 
 @Injectable()
 export class Searcher {
-  public getSearcher(mapView, FeatureLayer, Search, parent): esri.Search {
+  public getSearcher(FeatureLayer, Search, mapView, parent): esri.Search {
     const searcher = new Search({
+      includeDefaultSources: false,
       view: mapView,
         sources: [{
         featureLayer: new FeatureLayer({

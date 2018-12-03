@@ -22,7 +22,7 @@ export class EsriMapComponent implements OnInit {
   private zoom;
   private mapView: esri.MapView;
   private groupLayer: esri.GroupLayer;
-  private layer: esri.FeatureLayer;
+  private layers: Array;
   private searchWidget: esri.Search;
 
   constructor(@Inject(CriticalInfrastructure) private critical, @Inject(Searcher) private searcher) {}
@@ -55,24 +55,28 @@ export class EsriMapComponent implements OnInit {
       const expand = new Expand({ view: this.mapView, content: basemapGallery });
       const layerList = new LayerList({ view: this.mapView });
       this.mapView.when(() => { this.mapLoaded.emit(true);} );
-      this.searchWidget = this.searcher.getSearcher(this.mapView, FeatureLayer, Search, this);
+      this.searchWidget = this.searcher.getSearcher(FeatureLayer, Search, this.mapView, this);
       this.groupLayer = this.critical.getLayers(FeatureLayer, GroupLayer, this);
       this.mapView.ui.add(expand, 'top-left');
       this.mapView.ui.add(layerList, 'top-left');
       this.mapView.ui.add(this.searchWidget, 'top-right');
       this.mapView.map.add(this.groupLayer);
+      this.layers = this.groupLayer.layers;
     } catch (error) {
       alert('se produjo un error');
       console.log('error: ' + error);
     }
   }
 
-  setGroupLayer(index: number) {
+  private setGroupLayer(index: number):void {
     const indexes = [];
     let value = 24;
-    for(let i=1;i<=25;i++) indexes[i] = value--;
-    this.layer = this.groupLayer.layers._items[indexes[index]];
-    this.layer.visible = true;
+    for(let i=0;i<=24;i++) indexes[i] = value--;
+    this.layers._items[indexes[index]].visible = true;
+  }
+
+  private setSymbols():void {
+
   }
 
 }
