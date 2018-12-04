@@ -22,7 +22,7 @@ export class EsriMapComponent implements OnInit {
   private zoom: number;
   private mapView: esri.MapView;
   private groupLayer: esri.GroupLayer;
-  private layers: Array;
+  private layers;
   private searchWidget: esri.Search;
 
   constructor(@Inject(CriticalInfrastructure) private critical, @Inject(Searcher) private searcher) {}
@@ -55,7 +55,7 @@ export class EsriMapComponent implements OnInit {
       const expand = new Expand({ view: this.mapView, content: basemapGallery });
       const layerList = new LayerList({ view: this.mapView });
       this.mapView.when(() => { this.mapLoaded.emit(true);} );
-      this.searchWidget = this.searcher.getSearcher(FeatureLayer, Search, this.mapView, this);
+      this.searchWidget = this.searcher.getSearcher(FeatureLayer, Search, this);
       this.groupLayer = this.critical.getLayers(FeatureLayer, GroupLayer, this);
       this.mapView.ui.add(expand, 'top-left');
       this.layers = this.groupLayer.layers;

@@ -12,13 +12,13 @@ export class CriticalInfrastructure {
     const analisisFoDoPuntos = new FeatureLayer({
       url: urlConstants.ANALISIS_DE_FO_PUNTOS,
       title: 'Analisis Fo Puntos',
-      popupTemplate: this.templateConstants.analisisFo,
+      popupTemplate: this.templateConstants.analisisFoPuntos,
       visible: false
     });
     const analisisFoDoLineas = new FeatureLayer({
       url: urlConstants.ANALISIS_DE_FO_LINEAS,
       title: 'Analisis Fo Lineas',
-      popupTemplate: this.templateConstants.analisisFo,
+      popupTemplate: this.templateConstants.analisisFoLineas,
       visible: false
     });
     const centronorteWom  = new FeatureLayer({

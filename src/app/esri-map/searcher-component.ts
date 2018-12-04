@@ -5,10 +5,10 @@ import esri = __esri;
 
 @Injectable()
 export class Searcher {
-  public getSearcher(FeatureLayer, Search, mapView, parent): esri.Search {
+  public getSearcher(FeatureLayer, Search, parent): esri.Search {
     const searcher = new Search({
       includeDefaultSources: false,
-      view: mapView,
+      view: parent.mapView,
         sources: [{
         featureLayer: new FeatureLayer({
           url: urlConstants.ANALISIS_DE_FO_PUNTOS,

@@ -2,8 +2,27 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class TemplateConstants {
-    readonly analisisFo = {
-      title: "Análisis FO",
+    readonly analisisFoPuntos = {
+      title: "Análisis FO Puntos",
+      content: [{
+        type: "fields",
+        fieldInfos: [{
+          fieldName: "Name",
+          label: "Nombre",
+          visible: true
+        },{
+          fieldName: "FolderPath",
+          label: "Ruta",
+          visible: true
+        },{
+          fieldName: "PopupInfo",
+          label: "Info",
+          visible: true
+        }]
+      }]
+    };
+    readonly analisisFoLineas = {
+      title: "Análisis FO Lineas",
       content: [{
         type: "fields",
         fieldInfos: [{
