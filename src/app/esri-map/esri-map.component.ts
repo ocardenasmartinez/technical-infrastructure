@@ -19,7 +19,7 @@ export class EsriMapComponent implements OnInit {
   private _zoom: number = 8;
   private _center: Array<number> = [-70.6514212, -33.440616];
   private _basemap: string = 'streets';
-  private zoom;
+  private zoom: number;
   private mapView: esri.MapView;
   private groupLayer: esri.GroupLayer;
   private layers: Array;
@@ -58,10 +58,10 @@ export class EsriMapComponent implements OnInit {
       this.searchWidget = this.searcher.getSearcher(FeatureLayer, Search, this.mapView, this);
       this.groupLayer = this.critical.getLayers(FeatureLayer, GroupLayer, this);
       this.mapView.ui.add(expand, 'top-left');
+      this.layers = this.groupLayer.layers;
       this.mapView.ui.add(layerList, 'top-left');
       this.mapView.ui.add(this.searchWidget, 'top-right');
       this.mapView.map.add(this.groupLayer);
-      this.layers = this.groupLayer.layers;
     } catch (error) {
       alert('se produjo un error');
       console.log('error: ' + error);
