@@ -77,7 +77,7 @@ export class CriticalInfrastructure {
     });
     const zonanorteWom  = new FeatureLayer({
       url: urlConstants.NORTE_WOM,
-      title: 'Zona Norte Claro Chile',
+      title: 'Zona Norte Wom',
       popupTemplate: this.templateConstants.infraestructuraCritica2,
       visible: false
     });

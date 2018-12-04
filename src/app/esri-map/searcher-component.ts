@@ -319,14 +319,14 @@ export class Searcher {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.STI_CRM_ESTACIONES,
+          url: urlConstants.STI_CRM_MEDICIONES,
           outFields: ["*"]
         }),
-        searchFields: ["COD_EMPRESA"],
-        displayField: "COD_EMPRESA",
+        searchFields: ["NOMBRE_EMPRESA"],
+        displayField: "NOMBRE_EMPRESA",
         exactMatch: false,
-        name: "STI CRM ESTACIONES",
-        placeholder: "Código Empresa",
+        name: "STI CRM MEDICIONES",
+        placeholder: "Nombre Empresa",
         maxResults: 6,
         maxSuggestions: 6,
         suggestionsEnabled: true,
@@ -347,14 +347,14 @@ export class Searcher {
         minSuggestCharacters: 0
       },{
         featureLayer: new FeatureLayer({
-          url: urlConstants.STI_CRM_MEDICIONES,
+          url: urlConstants.STI_CRM_ESTACIONES,
           outFields: ["*"]
         }),
-        searchFields: ["NOMBRE_EMPRESA"],
-        displayField: "NOMBRE_EMPRESA",
+        searchFields: ["COD_EMPRESA"],
+        displayField: "COD_EMPRESA",
         exactMatch: false,
-        name: "STI CRM MEDICIONES",
-        placeholder: "Nombre Empresa",
+        name: "STI CRM ESTACIONES",
+        placeholder: "Código Empresa",
         maxResults: 6,
         maxSuggestions: 6,
         suggestionsEnabled: true,
