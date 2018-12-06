@@ -160,9 +160,9 @@ export class CriticalInfrastructure {
       visible: false
     });
     groupLayer = new GroupLayer({
-        title: "Infraestructura Crítica",
+        title: 'Infraestructura Crítica',
         visible: true,
-        visibilityMode: "independent",
+        visibilityMode: 'independent',
         layers: [
           STI_CRM_ESTACIONES, STI_CBS_SAE, STI_CRM_MEDICIONES, IC1_PLANFISCA_N5MAYO,
           IC1_IC2_2016_2020, norteClaroChile, norteClaroComunicaciones,

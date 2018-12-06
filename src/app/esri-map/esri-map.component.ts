@@ -16,14 +16,14 @@ export class EsriMapComponent implements OnInit {
   @Output() mapLoaded = new EventEmitter<boolean>();
   @ViewChild('mapViewNode') private mapViewEl: ElementRef;
 
-  private _zoom: number = 8;
+  private _zoom = 8;
   private _center: Array<number> = [-70.6514212, -33.440616];
-  private _basemap: string = 'streets';
+  private _basemap = 'streets';
   private zoom: number;
   private mapView: esri.MapView;
   private groupLayer: esri.GroupLayer;
   private layers;
-  private searchWidget: esri.Search;
+  private searchWidget;
 
   constructor(@Inject(CriticalInfrastructure) private critical, @Inject(Searcher) private searcher) {}
   async ngOnInit() { this.initializeMap(); }
@@ -54,7 +54,7 @@ export class EsriMapComponent implements OnInit {
       });
       const expand = new Expand({ view: this.mapView, content: basemapGallery });
       const layerList = new LayerList({ view: this.mapView });
-      this.mapView.when(() => { this.mapLoaded.emit(true);} );
+      this.mapView.when(() => { this.mapLoaded.emit(true); } );
       this.searchWidget = this.searcher.getSearcher(FeatureLayer, Search, this);
       this.groupLayer = this.critical.getLayers(FeatureLayer, GroupLayer, this);
       this.mapView.ui.add(expand, 'top-left');
@@ -68,10 +68,10 @@ export class EsriMapComponent implements OnInit {
     }
   }
 
-  private setGroupLayer(index: number):void {
+  private setGroupLayer(index: number): void {
     const indexes = [];
     let value = 24;
-    for(let i=0;i<=24;i++) indexes[i] = value--;
+    for (let i = 0; i <= 24; i++) { indexes[i] = value--; }
     this.layers._items[indexes[index]].visible = true;
   }
 
