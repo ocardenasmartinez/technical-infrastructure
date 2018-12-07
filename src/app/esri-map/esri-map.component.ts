@@ -71,7 +71,7 @@ export class EsriMapComponent implements OnInit {
   private setGroupLayer(index: number): void {
     const indexes = [];
     let value = 24;
-    for (let i = 0; i <= 24; i++) { indexes[i] = value--; }
+    for (let i = 1; i <= 25; i++) indexes[i] = value--;
     this.layers._items[indexes[index]].visible = true;
   }
 

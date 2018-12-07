@@ -7,7 +7,6 @@ import esri = __esri;
 export class Searcher {
   public getSearcher(FeatureLayer, Search, parent): esri.Search {
     const searcher = new Search({
-      includeDefaultSources: false,
       view: parent.mapView,
         sources: [{
         featureLayer: new FeatureLayer({
