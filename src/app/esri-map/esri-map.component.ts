@@ -54,7 +54,7 @@ export class EsriMapComponent implements OnInit {
       });
       const expand = new Expand({ view: this.mapView, content: basemapGallery });
       const layerList = new LayerList({ view: this.mapView });
-      this.mapView.when(() => { this.mapLoaded.emit(true); } );
+      this.mapView.when(() => { this.mapLoaded.emit(true); });
       this.searchWidget = this.searcher.getSearcher(FeatureLayer, Search, this);
       this.groupLayer = this.critical.getLayers(FeatureLayer, GroupLayer, this);
       this.mapView.ui.add(expand, 'top-left');
@@ -62,16 +62,18 @@ export class EsriMapComponent implements OnInit {
       this.mapView.ui.add(layerList, 'top-left');
       this.mapView.ui.add(this.searchWidget, 'top-right');
       this.mapView.map.add(this.groupLayer);
-    } catch (error) {
+    } catch(error) {
       alert('se produjo un error');
       console.log('error: ' + error);
     }
   }
 
   private setGroupLayer(index: number): void {
+    console.log('valor: ' + index);
+    if(index <= 0) return;
     const indexes = [];
     let value = 24;
-    for (let i = 1; i <= 25; i++) indexes[i] = value--;
+    for(let i = 1; i <= 24; i++) indexes[i] = value--;
     this.layers._items[indexes[index]].visible = true;
   }
 
