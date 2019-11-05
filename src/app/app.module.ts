@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { EsriMapComponent } from './esri-map/esri-map.component';
 import { OnlyMapComponent } from './only-map/only-map.component';
 import { TemplateConstants } from './esri-map/template-constants';
-import { LayerCriticalInf } from './esri-map/layers-component';
+import { CriticalInfrastructure } from './esri-map/layers-component';
 import { Searcher } from './esri-map/searcher-component';
 
 @NgModule({
@@ -22,7 +22,7 @@ import { Searcher } from './esri-map/searcher-component';
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},
               {provide: TemplateConstants, useClass: TemplateConstants},
-              {provide: LayerCriticalInf, useClass: LayerCriticalInf},
+              {provide: CriticalInfrastructure, useClass: CriticalInfrastructure},
               {provide: Searcher, useClass: Searcher}],
   bootstrap: [AppComponent]
 })
